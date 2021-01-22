@@ -21,14 +21,14 @@ function getDayFase() {
 
 function navToTimeLine() {
     //Animation
-    setTimeout(() => {  window.location = "/timeLine"; }, 5000);
+    setTimeout(() => {  window.location = "/timeLine"; }, 1000);
 }
 
 function Home({ Component, pageProps }) {    
     var dayFase = getDayFase();
     
     return (
-        <div>
+        <div >
 
             <style jsx global >{`       
             HTML,BODY{
@@ -47,7 +47,7 @@ function Home({ Component, pageProps }) {
             `}
             </style>
             <div>
-                <h1 className={styles.title} >Good <br/>{dayFase}...</h1>
+                <h1 className={styles.title} >Good <br/>{dayFase}</h1>
             </div>
           
             <FaAngleDoubleDown className={styles.icon} onClick={ navToTimeLine}/>

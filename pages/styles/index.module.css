@@ -6,62 +6,70 @@
     line-height: 87.5%;
  
     color: #ebebeb;
-    -webkit-text-stroke: 5px #2d2d2d52;
+    font-size: calc(70px + (150 - 40) * ((100vw - 300px) / (1600 - 300)));
     mix-blend-mode: normal;
-    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.541);
+    text-shadow: 0.08em 0.08em 0.03em rgba(0, 0, 0, 0.541);
     text-align: left;
-
+    -webkit-text-stroke: 0.055em #2d2d2d52;
     
-    margin-top: 1.4em;
+    
+    margin-top: 35vh;
     margin-left: 3%;
     
+    animation: float 5s ease-in-out infinite;
 
-    font-size: calc(70px + (150 - 40) * ((100vw - 300px) / (1600 - 300)));
 }
-
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	
+	100% {
+		transform: translatey(0px);
+	}
+}
 
 .icon{
     color: #2d2d2d52;
-    size: 200%;
-    align-self: center;
-    vertical-align: 222%;
-    padding-left: 47%;
-    padding-right: 50%;
-    height: 3.5%;
-    width: 3.5%;
+    
+    padding-left: 50vw;
+    padding-right: 50vw;
+    
+    height: 5vh;
+    width: 5vh;
     -webkit-transition: all 0.8s;
 
-    -webkit-animation: mover 0.7s infinite  alternate;
-    animation: mover 0.7s infinite  alternate;
+    -webkit-animation: move 0.6s infinite  alternate;
+    animation: move 0.7s infinite  alternate;
 
-}
-@media screen and (min-width: 600) { /*DESKTOP*/
-    .icon {
-        padding-top: 2em;
-    }
-}
-
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 601px) { /*MOBILE*/
-    .icon {
-        height:10%  ;
-        width: 10%;
-        padding-top: 10.3em;
-    }
-  }
-
-@-webkit-keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-8px); }
-}
-@keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-8px); }
+    align-self: flex-end;
 }
 
 .icon:hover {
     color: #2d2d2d96;
 }
 
+@media (max-width: 900px){
+    .icon{
+        padding-top: 13vh;
+    }
+}
+@media (max-width: 600px) { 
+    .icon {
+        padding-top: 25vh;
+    }
+}
+
+@-webkit-keyframes move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
+@keyframes move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
 
 
