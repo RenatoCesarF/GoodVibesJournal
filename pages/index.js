@@ -39,7 +39,7 @@ function navToTimeLine() {
 }
 
 function Home({ Component, pageProps }) {    
-    var dayFase = "Morning"//getDayFase();
+    var dayFase = getDayFase();
     
     return (
         <div >
