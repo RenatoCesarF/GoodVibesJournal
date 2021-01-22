@@ -1,4 +1,4 @@
-
+/*=======TITLES STUFS=======*/
 .title {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
@@ -12,13 +12,34 @@
     text-align: left;
     -webkit-text-stroke: 0.055em #2d2d2d52;
     
+    margin-top: 35vh;
+    margin-left: 3%;
+
+    animation: 
+        comimg 1.2s ease-in-out,
+        fadein 1s ease-in-out,
+        float 2.4s ease-in-out infinite;
+}
+
+.titleGoing{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    
+    line-height: 87.5%;
+ 
+    color: #ebebeb;
+    font-size: calc(70px + (150 - 40) * ((100vw - 300px) / (1600 - 300)));
+    mix-blend-mode: normal;
+    text-shadow: 0.08em 0.08em 0.03em rgba(0, 0, 0, 0.541);
+    text-align: left;
+    -webkit-text-stroke: 0.055em #2d2d2d52;
     
     margin-top: 35vh;
     margin-left: 3%;
-    
-    animation: float 5s ease-in-out infinite;
 
+    animation: going 3s ;
 }
+
 @keyframes float {
 	0% {
 		transform: translatey(0px);
@@ -32,6 +53,25 @@
 	}
 }
 
+@keyframes fadein {
+    from { opacity: 0}
+    to   { opacity: 1}
+}
+@keyframes comimg{
+    from {margin-left: -25vw;}
+    to   {margin-left: 3%;}
+}
+@keyframes going{
+    0% { 
+        margin-top: 35vh;
+    }
+    100% {
+        margin-top: -250vh;;
+    }
+
+}
+
+/*========ICON STUFS=======*/
 .icon{
     color: #2d2d2d52;
     
@@ -40,10 +80,9 @@
     
     height: 5vh;
     width: 5vh;
-    -webkit-transition: all 0.8s;
 
-    -webkit-animation: move 0.6s infinite  alternate;
-    animation: move 0.7s infinite  alternate;
+    -webkit-animation: up-down-move 0.6s infinite  alternate;
+    animation: iconComing 1.4s   ease-in-out, up-down-move 0.7s infinite  alternate;
 
     align-self: flex-end;
 }
@@ -51,6 +90,18 @@
 .icon:hover {
     color: #2d2d2d96;
 }
+
+@keyframes iconComing{
+    0% { padding-top: 100vh; }
+    100% { padding-top: -2vh;}
+}
+
+@keyframes up-down-move {
+    0% { transform: translateY(0vh); }
+    100% { transform: translateY(-2vh); }
+}
+
+
 
 @media (max-width: 900px){
     .icon{
@@ -62,14 +113,3 @@
         padding-top: 20vh;
     }
 }
-
-@-webkit-keyframes move {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-8px); }
-}
-@keyframes move {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-8px); }
-}
-
-

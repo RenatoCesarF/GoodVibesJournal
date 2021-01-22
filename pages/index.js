@@ -1,6 +1,8 @@
 import styles from"./styles/index.module.css"
 import { FaAngleDoubleDown} from 'react-icons/fa';
 import Link  from 'next/link';
+import { render } from "react-dom";
+import React,{ useState } from 'react'
 
 export function getDayFase() {
     var dayFase;
@@ -33,14 +35,23 @@ export function getDayColor(dayFase){
     return backgroundColor;
 }
 
-function navToTimeLine() {
-    //Animation
-    setTimeout(() => {  window.location = "/timeLine"; }, 1000);
-}
+
+
+
 
 function Home({ Component, pageProps }) {    
+    const [titleState, setTitleState] = useState(styles.title);
+
     var dayFase = getDayFase();
     
+    const navToTimeLine = () => {        
+        setTitleState(styles.titleGoing);
+        
+        setTimeout(() => {
+            window.location = "/timeLine";
+        }, 800);
+   }
+
     return (
         <div >
 
@@ -61,7 +72,7 @@ function Home({ Component, pageProps }) {
             `}
             </style>
             <div>
-                <h1 className={styles.title} >Good <br/>{dayFase}</h1>
+                <h1 className={titleState} >Good <br/>{dayFase}</h1>
             </div>
           
             <FaAngleDoubleDown className={styles.icon} onClick={ navToTimeLine}/>
