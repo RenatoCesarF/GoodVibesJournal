@@ -1,24 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import 'react-dom';
 import 'next';
+import Link  from 'next/link';
 
-import styles from './HeaderMenu.module.css'
 
-function HeaderMenu() {
-    
+import styles from './Menu.module.css'
+
+export default function HeaderMenu() {
+
+    function changeTimeLineContentTo() {
+        console.log("TIME LINE CHANGED");
+    }
     return (
         <div>
-            <ul>
+            <ul className={styles.menu}>
         
-                <li>
-                    <Link href='/scroll' shallow={true} >Sobre</Link>
+                <li className={styles.menuOption}>
+                    <h3 className={styles.link} onClick={changeTimeLineContentTo}>Funny Twits</h3>
                 </li>
-                <li>
-                    <Link href='/scroll' shallow={true} >Projetos</Link>
+
+                <li className={styles.menuOption} >
+                    <h3 className={styles.link} onClick={changeTimeLineContentTo}>News</h3>
+                </li >
+
+                <li className={styles.menuOption}>
+                    <h3 className={styles.link} onClick={changeTimeLineContentTo}>Quotes</h3>
                 </li>
-                <li>
-                    <Link href='/scroll' shallow={true} >Posts</Link>
-                </li>
+             
             </ul>
         </div>
 

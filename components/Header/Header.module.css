@@ -7,10 +7,10 @@
     mix-blend-mode: normal;
     text-shadow: 0.1em 0.1em 0.07em rgba(0, 0, 0, 0.657);
     text-align: center;
+    padding-right: 2vw;
     -webkit-text-stroke: 0.08em #2d2d2d52;
     -webkit-text-fill-color:  #ebebeb;
 
-    padding-bottom: 0.5vh;
 }
 
 .header{
@@ -19,4 +19,5 @@
     padding: 0px;
     box-shadow:  1vh 0.6vh  #00000018;
     overflow: auto;
+
 }

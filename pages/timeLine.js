@@ -5,9 +5,10 @@ import dynamic from 'next/dynamic';
 import Link  from 'next/link';
 
 import { getDayFase, getDayColor } from '../utils/dayMomentSystem';
-import styles from '../../styles/timeLine.module.css';
+import styles from '../styles/timeLine.module.css';
 
 import Header from '../components/Header/Header'
+import Menu from '../components/Menu/Menu'
 
 function timeLine({ Component, pageProps }) {   
     
@@ -15,7 +16,6 @@ function timeLine({ Component, pageProps }) {
 
     return (
         <div>
-
             <style jsx global >{`       
                 HTML,BODY{
                         ${getDayColor(dayFase)}
@@ -31,9 +31,8 @@ function timeLine({ Component, pageProps }) {
                     }
                 `}
                 </style>
-
-                <Header/>
-           
+            <Header/>
+            <Menu/>
         </div>  
     );
 }
