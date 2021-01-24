@@ -4,6 +4,7 @@
     height: 40vh;
     margin-bottom: 2%;
     justify-content: center;
-
+    text-shadow: 0.4em 0.4em 0.07em rgba(0, 0, 0, 0.657);
     max-width: 1000px;
+    box-shadow:  0vh 1vh 0.6vh #00000018;
 }
