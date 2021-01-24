@@ -1,31 +1,34 @@
 .menu{
     flex-grow: 1;
-    padding-right: 8vw;
+    margin-right: 8vw;
     display: flex;
     justify-content: center;
+    text-align: center;
+
     
 }
 .menuOption{
+    justify-content: center;
     display: flex;
-    padding-left: 0.1vw;
-    padding-right: 0.1vw;
-    text-align: center;
-    
+    margin-left: 0.1vw;
+    margin-right: 0.1vw;    
     display: inline-flex;
     text-align: center;
+
     
 }
 
 .link{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    
     text-align: center;
     color:#ebebeb9d;
-    padding-right: 5vw;
-    padding-left: 5vw;
+    margin-right: 4vw;
+    margin-left: 4vw;
     align-items: center;
     font: bold;
-    font-size: calc(10 + (90 - 10) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(10 + (100 - 10) * ((100vw - 300px) / (1600 - 300)));
+    padding: 1vw;
 
     transition: ease-in-out;
     -webkit-transition: all 0.3s
@@ -42,8 +45,8 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     text-align: center;
-    padding-right: 5vw;
-    padding-left: 5vw;
+    margin-right: 5vw;
+    margin-left: 5vw;
     align-items: center;
     font: bold;
     font-size: calc(20 + (140 - 20) * ((100vw - 300px) / (1600 - 300)));
@@ -53,4 +56,10 @@
     color:#ebebeb;
     background-color: #2d2d2d52;
     border-radius: 4vh;
+}
+
+@media (max-width: 768px){
+    .menu{
+        margin-right: 5vw;        
+    }
 }

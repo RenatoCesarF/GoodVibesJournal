@@ -16,7 +16,7 @@ export default function HeaderMenu() {
             <ul className={styles.menu}>
         
                 <li className={styles.menuOption}>
-                    <h3 className={styles.link} onClick={changeTimeLineContentTo}>Funny Twits</h3>
+                    <h3 className={styles.link} onClick={changeTimeLineContentTo}>Twits</h3>
                 </li>
 
                 <li className={styles.menuOption} >

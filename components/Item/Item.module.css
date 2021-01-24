@@ -1,0 +1,9 @@
+.item{
+    background-color: #C4C4C4;
+    border-radius: 4vh;
+    height: 40vh;
+    margin-bottom: 4vh;
+    justify-content: center;
+
+    max-width: 1000px;
+}

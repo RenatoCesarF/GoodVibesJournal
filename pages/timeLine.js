@@ -7,8 +7,9 @@ import Link  from 'next/link';
 import { getDayFase, getDayColor } from '../utils/dayMomentSystem';
 import styles from '../styles/timeLine.module.css';
 
-import Header from '../components/Header/Header'
-import Menu from '../components/Menu/Menu'
+import Header from '../components/Header/Header';
+import Menu from '../components/Menu/Menu';
+import Scroll from '../components/Scroll/Scroll';
 
 function timeLine({ Component, pageProps }) {   
     
@@ -32,7 +33,8 @@ function timeLine({ Component, pageProps }) {
                 `}
                 </style>
             <Header/>
-            <Menu/>
+            <Menu />
+            <Scroll/>
         </div>  
     );
 }

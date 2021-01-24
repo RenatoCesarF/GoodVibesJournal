@@ -1,0 +1,24 @@
+.scroller{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 50vw;
+    height: 75vh;
+    margin: 0 auto;
+    overflow-y: scroll;
+    scroll-behavior: auto;
+    
+    margin-right: 27vw;
+}
+
+@media (max-width: 768){
+    .scroller{
+        margin-right: 0vw;        
+    }
+}
+@media (max-width: 544px){
+    .scroller{
+        width: 90vw;
+        height: 90vh;
+        margin-right: 0vw;
+    }
+}
