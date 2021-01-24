@@ -1,9 +1,8 @@
 import styles from './Header.module.css';
-
 function Header() {   
     return (
         <header className={styles.header}>
-            <a className={styles.headerTitle}>Good Vibes</a>
+            <h1 unselectable="on" className={styles.headerTitle}>Good Vibes</h1>
         </header>
     );
 }
