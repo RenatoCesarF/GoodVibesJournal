@@ -18,7 +18,7 @@ function timeLine({ Component, pageProps }) {
     return (
         <div>
             <head>
-                <meta name="theme-color" content="invalid"></meta>
+                <meta name="theme-color" content="currentcolor"></meta>
             </head>
             <style jsx global >{`       
                 HTML,BODY{

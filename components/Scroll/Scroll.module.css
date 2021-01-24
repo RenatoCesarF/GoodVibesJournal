@@ -19,7 +19,7 @@
 @media (max-width: 544px){
     .scroller{
         width: 90vw;
-        max-height: 80vh;
+        max-height: 70vh;
         
         margin-right: 3vw;
     }
