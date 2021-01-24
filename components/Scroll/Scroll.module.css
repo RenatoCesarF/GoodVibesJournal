@@ -2,12 +2,13 @@
     display: grid;
     grid-template-columns: 1fr;
     width: 50vw;
-    height: 75vh;
+    height: 34em;
+    max-height: 66vh;
     margin: 0 auto;
     overflow-y: scroll;
     scroll-behavior: auto;
     
-    margin-right: 27vw;
+    margin-right: 27%;
 }
 
 @media (max-width: 768){
@@ -18,7 +19,9 @@
 @media (max-width: 544px){
     .scroller{
         width: 90vw;
-        height: 90vh;
-        margin-right: 0vw;
+        max-height: 80vh;
+        
+        margin-right: 3vw;
     }
 }
+

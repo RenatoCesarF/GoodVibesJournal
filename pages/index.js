@@ -21,6 +21,9 @@ function Home({ Component, pageProps }) {
 
     return (
         <div >
+            <head>
+                <meta name="theme-color" content="invalid"></meta>
+            </head>
 
             <style jsx global >{`       
             HTML,BODY{
