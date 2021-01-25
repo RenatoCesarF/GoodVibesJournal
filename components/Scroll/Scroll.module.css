@@ -3,12 +3,13 @@
     grid-template-columns: 1fr;
     width: 50vw;
     height: 34em;
-    max-height: 66vh;
+    max-height: 65vh;
     margin: 0 auto;
     overflow-y: scroll;
     scroll-behavior: auto;
     
     margin-right: 27%;
+
 }
 
 @media (max-width: 768){

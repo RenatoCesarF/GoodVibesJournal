@@ -43,7 +43,8 @@
     margin-top: 35vh;
     margin-left: 3%;
 
-    animation: going 3s ;
+    animation: going 3s;
+    animation-fill-mode: none;
 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */

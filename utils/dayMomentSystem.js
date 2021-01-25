@@ -3,11 +3,11 @@ export function getDayFase() {
     var time = new Date().getHours();
     
     
-    if (time < 12) {
+    if (time < 12 & time > 4) {
         dayFase = "Morning";
     } else if (time >= 12 & time < 18) {
         dayFase = "Evening";
-    } else {
+    } else if(time >=18 & time <4) {
         dayFase = "Night";
     }
     
