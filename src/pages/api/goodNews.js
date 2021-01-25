@@ -1,11 +1,10 @@
-//Access: /api/teste
 
 async function getGoodNews(request, response) {
-   
+   //TODO: add an ID to each new, thus we can filter it
     
     //Getting user country
-    const country = Intl.DateTimeFormat().resolvedOptions().locale;
-    const countryCode = country[3] + country[4];
+    //const country = Intl.DateTimeFormat().resolvedOptions().locale;
+    //const countryCode = country[3] + country[4];
     
     //Configurating the NewsAPI request 
     var url = 'http://newsapi.org/v2/top-headlines?' +
@@ -13,8 +12,6 @@ async function getGoodNews(request, response) {
         //`country=${countryCode}&` +
         `country=us&` +
         `apiKey=${process.env.NEWS_API_KEY}`;
-
-    
     
     const apiResponse = await fetch(url) //Getting all the top-headlines news 
     const responseToJson = await apiResponse.json(); //Transforming it into JSON
@@ -27,24 +24,26 @@ async function getGoodNews(request, response) {
     var positiveArticles = [];
 
 
+    //console.log(`\nThe initial number of articles is: ${articles.length}\n`)
+    
     //Filtering and Getting just the good news 
-    console.log(`\nThe initial number of articles is: ${articles.length}\n`)
-
     articles.forEach(element => {
         var eachSentiment = sentiment.analyze(element.title);//Choosing what to analyze
         
         if(eachSentiment.score>= 1){ //separeting the positive from the negative ones
-            console.log(`\nthe title: \n${element.title}\n is positive\n`)
+            //console.log(`\nthe title: \n${element.title}\n is positive\n`)
             positiveArticles.push(element);
         }
     });
     
-    console.log( `\nThe final number of articles is :${positiveArticles.length} \n`)
+    //console.log( `\nThe final number of articles is :${positiveArticles.length} \n`)
     
 
     //Configuring the response of our API
     response.setHeader('Cache-Controll','s-maxage=10','stale-while-revalidate')
-    response.json(positiveArticles);
+    const newsInJson = response.json(positiveArticles);
+
+    return newsInJson;
 
 }
 

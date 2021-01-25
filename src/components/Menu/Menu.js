@@ -3,8 +3,10 @@ import 'react-dom';
 import 'next';
 import Link  from 'next/link';
 
+import {setTimeLineTo} from '../Scroll/Scroll'
 
 import styles from './Menu.module.css'
+
 
 export default function HeaderMenu() {
 
@@ -22,15 +24,15 @@ export default function HeaderMenu() {
         switch (option) {
             case "Twits":
                 setTwitsOption(styles.selectedOption);
-                //Set the timeLine as twits
+                //setTimeLineTo("Twits");
                 break;
             case "News":
                 setNewsOption(styles.selectedOption);
-                //Set the timeLine as news
+                setTimeLineTo("News");
                 break;
             case "Quotes": 
                 setQuotesOption(styles.selectedOption);
-                //Set the timeLine as quotes
+                //setTimeLineTo("Quotes");
                 break;
 
         }

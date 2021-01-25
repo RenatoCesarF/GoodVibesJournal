@@ -6,7 +6,7 @@ import styles from"../styles/index.module.css"
 import { getDayFase, getDayColor } from '../utils/dayMomentSystem';
 
 
-function Home({ Component, pageProps }) {    
+function Home() {    
     const [titleState, setTitleState] = useState(styles.title);
 
     var dayFase = getDayFase();
@@ -16,7 +16,7 @@ function Home({ Component, pageProps }) {
         
         setTimeout(() => {
             window.location = "/timeLine";
-        }, 800);
+        }, 700);
    }
 
     return (

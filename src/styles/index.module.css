@@ -44,7 +44,7 @@
     margin-left: 3%;
 
     animation: going 3s;
-    animation-fill-mode: none;
+    animation-fill-mode: initial;
 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
