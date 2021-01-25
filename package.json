@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/RenatoCesarF/nextJsTest#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "next": "^10.0.5",
     "react": "^17.0.1",
     "react-awesome-slider": "^4.1.0",
