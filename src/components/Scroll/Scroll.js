@@ -31,7 +31,6 @@ export default function  Scroll() {
     setTimeLineTo("News")//untill we don't have an random menu option, we will start with this one
     return (
         <div className={styles.scroller}>
-            <meta name="theme-color" content="invalid"></meta>
             <style jsx global >{`  
           
             ::-webkit-scrollbar{

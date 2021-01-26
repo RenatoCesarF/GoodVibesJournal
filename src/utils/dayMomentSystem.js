@@ -11,6 +11,7 @@ export function getDayFase() {
             break;
         case time >= 18 & time < 4:
             dayFase = "Night";
+            break;
         default:
             dayFase = "Morning";
             break;
