@@ -11,19 +11,26 @@ export default function  Item(props) {
 
     return (
         <div className={styles.item}>
+            <div className={styles.newHeader}>
 
-            <h3 className={styles.title}>{props.title}</h3>
+                <img
+                    className={styles.image}
+                    src={props.image} >
+                
+                </img>
 
-            <a
-                className={styles.description}>
-                {props.description}
-            </a>
+                <h3 className={styles.title}>{props.title}</h3>
+            </div>
 
-            <img
-                className={styles.image}
-                src={props.image} >
-            
-            </img>
+
+            <div className={styles.descriptionDiv}>
+                <a
+                    className={styles.description}>
+                    {props.description}
+                </a>
+            </div>
+
+
         </div>
     );
 }

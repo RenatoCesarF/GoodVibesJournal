@@ -1,21 +1,19 @@
+import { normalizeRouteRegex } from "next/dist/lib/load-custom-routes";
+
 export function getDayFase() {
     var dayFase;
     var time = new Date().getHours();
-    
-    switch (time) {
-        case time<12 & time >=4:
-            dayFase = "Morning";
-            break;
-        case time >= 12 & time < 18:
-            dayFase = "Evening";
-            break;
-        case time >= 18 & time < 4:
-            dayFase = "Night";
-            break;
-        default:
-            dayFase = "Morning";
-            break;
+
+    if (time > 4 && time < 12) {
+        dayFase = "Morning";
     }
+    else if (time >= 12 && time < 18) {        
+        dayFase = "Evening";
+    }
+    else if (time >= 18 && time <= 3) {
+        dayFase = "Night";
+    }
+    else { dayFase = "Morning" }
     
     return dayFase;
 }

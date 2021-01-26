@@ -23,6 +23,7 @@ export const setTimeLineTo = async (option) =>{
 export default function Scroll() {
   
     const [data, setData] = useState(null);
+    
     useEffect(() => {
         axios.get('http://localhost:3000/api/goodNews')
             .then((res) => {
