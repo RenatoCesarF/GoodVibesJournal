@@ -1,4 +1,4 @@
-import React, {} from 'react';
+import React, { Component, useState,useEffect } from 'react';
 import Next from 'next';
 
 import styles from './Scroll.module.css';
@@ -6,33 +6,38 @@ import Item from '../Item/Item';
 
 import newsController from '../../controllers/newsController';
 
-export const setTimeLineTo = (option) =>{
+const axios = require("axios");
+
+
+export const setTimeLineTo = async (option) =>{
     switch (option) {
         case "News":
-            newsController.getAllgoodNews();
+            var teste = await newsController.getAllgoodNews();
+            console.log(teste);
             break;
-        /*
-        case "Twits":
-            newsController.getAllgoodNews();
-            break;
-        case "Quotes":
-            newsController.getAllgoodNews();
-            break;
-        */
         default:
             break;
     }
 }
 
-export default function  Scroll() {
-    
+export default function Scroll() {
+  
+    const [data, setData] = useState(null);
+    useEffect(() => {
+        axios.get('http://localhost:3000/api/goodNews')
+            .then((res) => {
+                setData(res.data);
+                console.log(data);
+            })
+            .catch((error) =>{ console.log(error);});
+    }, []);
 
-   
-    setTimeLineTo("News")//untill we don't have an random menu option, we will start with this one
+
     return (
-        <div className={styles.scroller}>
+
+        <div className={styles.scroller} >
             <style jsx global >{`  
-          
+        
             ::-webkit-scrollbar{
                 position: relative;
                 background: rgba(0, 0, 0, .1);
@@ -66,22 +71,26 @@ export default function  Scroll() {
                     
                 }
             }
-           `}
+        `}
             </style>
-            <Item
-                title="TESTE"
-                description="Descrição"
-                image="https://nypost.com/wp-content/uploads/sites/2/2021/01/super-bowl-ad-dropouts-1.jpg?quality=90&strip=all&w=1200" />
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
+            {data ? (
 
+                <Item
+                    title={data[0].title}
+                    description={data[0].description}
+                    image={data[0].urlToImage}
+                />
+
+            ) : (
+                    
+                <h3> Loading</h3>
+            )}
+           
         </div>
+
+            
     );
+
+
 }
 
-/*
-
-*/
