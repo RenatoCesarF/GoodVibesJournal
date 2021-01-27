@@ -1,14 +1,19 @@
 import React from 'react';
+import { useRouter,Router } from 'next/router'
 import Next from 'next';
 
 import styles from './Item.module.css';
 import { useEffect } from 'react';
 import getGoodNews from '../../pages/api/goodNews';
 
-export default function  Item(props) {
-    
-    
+function redirectToNew(url) {
+    const {pathname} = Router
+    window.open(url)
 
+    
+}
+
+export default function  Item(props) {
     return (
         <div className={styles.item}>
             <div className={styles.newHeader}>
@@ -19,7 +24,7 @@ export default function  Item(props) {
                 
                 </img>
 
-                <h3 className={styles.title}>{props.title}</h3>
+                <h3 onClick={() => { redirectToNew(props.url) }} className={styles.title}>{props.title}</h3>
             </div>
 
 

@@ -25,7 +25,7 @@ export default function Scroll() {
     const [data, setData] = useState(null);
     
     useEffect(() => {
-        axios.get('http://localhost:3000/api/goodNews')
+        axios.get('/api/goodNews')
             .then((res) => {
                 setData(res.data);
                 console.log(data);
@@ -75,12 +75,18 @@ export default function Scroll() {
         `}
             </style>
             {data ? (
-
-                <Item
-                    title={data[0].title}
-                    description={data[0].description}
-                    image={data[0].urlToImage}
-                />
+                
+                data.map((index) => 
+                    
+                    <Item
+                        title={index.title}
+                        description={index.description}
+                        image={index.urlToImage}
+                        url={index.url}
+                        //TODO: redirect to the new page when click
+                    />
+                )
+                
 
             ) : (
                     
@@ -95,3 +101,7 @@ export default function Scroll() {
 
 }
 
+/*
+
+           
+*/
