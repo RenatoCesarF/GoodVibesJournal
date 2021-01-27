@@ -10,11 +10,13 @@ export function getDayFase() {
     else if (time >= 12 && time < 18) {        
         dayFase = "Evening";
     }
-    else if (time >= 18 && time <= 3) {
+    else if (time >= 18) {
+        dayFase = "Night";
+    }
+    else if (time <= 3) {
         dayFase = "Night";
     }
     else { dayFase = "Morning" }
-    
     return dayFase;
 }
 
