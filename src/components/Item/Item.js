@@ -7,10 +7,7 @@ import { useEffect } from 'react';
 import getGoodNews from '../../pages/api/goodNews';
 
 function redirectToNew(url) {
-    const {pathname} = Router
     window.open(url)
-
-    
 }
 
 export default function  Item(props) {
@@ -18,7 +15,8 @@ export default function  Item(props) {
         <div className={styles.item}>
             <div className={styles.newHeader}>
 
-                <img
+                <img 
+                    onClick={() => { redirectToNew(props.url) }}
                     className={styles.image}
                     src={props.image} >
                 

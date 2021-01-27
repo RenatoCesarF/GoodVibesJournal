@@ -12,6 +12,14 @@
 
 }
 
+.loading{
+    width: 40%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+}
+
 @media (max-width: 768){
     .scroller{
         margin-right: 0vw;        
@@ -25,4 +33,3 @@
         margin-right: 3vw;
     }
 }
-

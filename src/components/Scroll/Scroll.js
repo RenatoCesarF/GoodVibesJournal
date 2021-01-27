@@ -1,12 +1,13 @@
 import React, { Component, useState,useEffect } from 'react';
 import Next from 'next';
-
 import styles from './Scroll.module.css';
 import Item from '../Item/Item';
 
+import ReactLoading from 'react-loading'
 import newsController from '../../controllers/newsController';
+//import loading from '../../../assets/loading.svg';
 
-const axios = require("axios");
+import axios from "axios";
 
 
 export const setTimeLineTo = async (option) =>{
@@ -57,7 +58,7 @@ export default function Scroll() {
             /* Handle */
             ::-webkit-scrollbar-thumb {
                 cursor: pointer;
-                background: #2d2d2d30;
+                background: #2d2d2d70;
                 border-radius: 5px;
 
             }
@@ -83,15 +84,20 @@ export default function Scroll() {
                         description={index.description}
                         image={index.urlToImage}
                         url={index.url}
-                        //TODO: redirect to the new page when click
+                        
                     />
                 )
                 
+                ) :
+                (
 
-            ) : (
-                    
-                <h3> Loading</h3>
-            )}
+                    <ReactLoading
+                        type={"bubbles"}
+                        color={"#C4C4C4"}
+                        className={styles.loading}
+                    />
+                )
+            }
            
         </div>
 
