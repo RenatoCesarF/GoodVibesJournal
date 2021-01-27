@@ -27,11 +27,12 @@ async function getGoodNews(request, response) {
     //console.log(`\nThe initial number of articles is: ${articles.length}\n`)
     
     //Filtering and Getting just the good news 
+    var counter = 0
     articles.forEach(element => {
         var eachSentiment = sentiment.analyze(element.title);//Choosing what to analyze
-        
-        if(eachSentiment.score>= 0){ //separeting the positive from the negative ones
-            //console.log(`\nthe title: \n${element.title}\n is positive\n`)
+        if(eachSentiment.score>= 1){ //separeting the positive from the negative ones
+            element.key = counter;
+            counter += 1;
             positiveArticles.push(element);
         }
     });

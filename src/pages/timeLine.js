@@ -14,7 +14,6 @@ import Scroll from '../components/Scroll/Scroll';
 
 
 
-
 function timeLine() {   
     
     var dayFase = getDayFase();
@@ -33,8 +32,6 @@ function timeLine() {
                         
                         width: 100%;
                         height:100%;
-
-                        overflow: hidden;
                         
                     }
                 `}

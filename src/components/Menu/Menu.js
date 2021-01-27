@@ -3,19 +3,17 @@ import 'react-dom';
 import 'next';
 import Link  from 'next/link';
 
-import MenuSystem from '../../utils/menuSystem'
-
-
+const Scroll = require("../Scroll/Scroll")
 import styles from './Menu.module.css'
 
 
 export default function HeaderMenu() {
+
     const [newsOption, setNewsOption] = useState(styles.selectedOption)
     const [twitsOption, setTwitsOption] = useState(styles.link)
     const [quotesOption, setQuotesOption] = useState(styles.link)
-    
+
     //Set the timeLine as news to start
-    var menu = new MenuSystem();
     function choseOption(option) {
         //Set all as unselected, then see witch one to set as selected
         setNewsOption(styles.link);
@@ -25,19 +23,17 @@ export default function HeaderMenu() {
         switch (option) {
             case "Twits":
                 setTwitsOption(styles.selectedOption);
-                //setOption("Twits");
                 break;
             case "News":
                 setNewsOption(styles.selectedOption);
-                menu.setMenuOption("News")
 
                 break;
             case "Quotes": 
                 setQuotesOption(styles.selectedOption);
                 //setOption("Quotes");
                 break;
-
         }
+                
     }
     return (
         <div>
