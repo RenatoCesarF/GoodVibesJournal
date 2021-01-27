@@ -27,7 +27,7 @@
     font: bold;
     font-size: calc(10 + (100 - 10) * ((100vw - 300px) / (1600 - 300)));
     padding: 1vw;
-
+    cursor: pointer;
     transition: ease-in-out;
     -webkit-transition: all 0.3s;
 
@@ -45,6 +45,8 @@
 }
 
 .selectedOption{
+    cursor: pointer;
+
     transition: ease-in-out;
     -webkit-transition: all 0.3s;
     color:#ebebebca;
