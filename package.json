@@ -25,6 +25,7 @@
     "react-awesome-slider": "^4.1.0",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",
+    "react-loading": "^2.0.3",
     "sentiment": "^5.0.2"
   }
 }
