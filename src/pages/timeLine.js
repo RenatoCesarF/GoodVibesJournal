@@ -1,12 +1,11 @@
 import { render } from "react-dom";
-import React,{ useState } from 'react'
+import React,{ Component, useState } from 'react'
 
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 
 import { getDayFase, getDayColor } from '../utils/dayMomentSystem';
-import styles from '../styles/timeLine.module.css';
 
 import Header from '../components/Header/Header';
 import Menu from '../components/Menu/Menu';
@@ -14,17 +13,22 @@ import Scroll from '../components/Scroll/Scroll';
 
 
 
-function timeLine() {   
-    
-    var dayFase = getDayFase();
-  
+export default class timeLine extends Component {
+    state = {
+        option: "News"
+    }
 
-    return (
-        <div>
+    changeTimeline = (nextOption) => {
+        this.setState({ option: nextOption })
+    }
+
+    render() {
+        var dayFase = getDayFase();
         
-    
-            <style jsx global >{`       
-                HTML,BODY{
+        return (
+            <div>
+                <style jsx global >{`       
+                html,body{
                         ${getDayColor(dayFase)}
                         margin: 0;
                         padding: 0;
@@ -34,15 +38,15 @@ function timeLine() {
                         height:100%;
                         
                         overflow: hidden;
-
                     }
                 `}
+                    
                 </style>
-            <Header/>
-            <Menu />
-            <Scroll/>
-        </div>  
-    );
+                
+                <Header/>
+                <Menu changeTimeline={this.changeTimeline}/>
+                <Scroll option={this.state.option}/>
+            </div>
+        );
+    }
 }
-
-export default timeLine;

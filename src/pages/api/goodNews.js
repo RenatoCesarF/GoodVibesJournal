@@ -1,5 +1,5 @@
 
-async function getGoodNews(request, response) {
+export default async function getGoodNews(request, response) {
    //TODO: add an ID to each new, thus we can filter it
     
     //Getting user country
@@ -21,8 +21,7 @@ async function getGoodNews(request, response) {
     var Sentiment = require('sentiment');
     var sentiment = new Sentiment();
     
-    var positiveArticles = [];
-
+    var positiveArticles = {type: "News", data:[]};
 
     //console.log(`\nThe initial number of articles is: ${articles.length}\n`)
     
@@ -33,19 +32,16 @@ async function getGoodNews(request, response) {
         if(eachSentiment.score>= 1){ //separeting the positive from the negative ones
             element.key = counter;
             counter += 1;
-            positiveArticles.push(element);
+            positiveArticles.data.push(element);
         }
     });
     
     //console.log( `\nThe final number of articles is :${positiveArticles.length} \n`)
     
-
     //Configuring the response of our API
-    response.setHeader('Cache-Controll','s-maxage=10','stale-while-revalidate')
-    const newsInJson = response.json(positiveArticles);
 
-    return newsInJson;
+    response.setHeader('Cache-Controll','s-maxage=10','stale-while-revalidate')
+    response.json(positiveArticles);
+
 
 }
-
-export default getGoodNews;

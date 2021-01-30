@@ -8,6 +8,8 @@
     text-shadow: 0.1em 0.1em 0.07em rgba(0, 0, 0, 0.657);
     text-align: center;
     margin-right: 5vw;
+
+    padding-bottom: 3vh;
     -webkit-text-stroke: 0.08em #2d2d2d52;
     -webkit-text-fill-color:  #ebebeb;
 

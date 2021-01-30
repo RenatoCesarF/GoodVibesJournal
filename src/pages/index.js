@@ -25,7 +25,7 @@ function Home() {
  
 
             <style jsx global >{`       
-            HTML,BODY{
+            html,body{
                     
                     ${getDayColor(dayFase)}
                     margin: 0;
@@ -38,6 +38,7 @@ function Home() {
 
                 }
             `}
+                
             </style>
             <div>
                 <h1 className={titleState} >Good <br/>{dayFase}</h1>

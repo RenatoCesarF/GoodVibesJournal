@@ -10,30 +10,48 @@ function redirectToNew(url) {
     window.open(url)
 }
 
-export default function  Item(props) {
-    return (
-        <div className={styles.item}>
-            <div className={styles.newHeader}>
+export default function Item(props) {
+    if (props.type == "News") {
+        return (
+            <div className={styles.newItem}>
+                <div className={styles.newHeader}>
 
-                <img 
-                    onClick={() => { redirectToNew(props.url) }}
-                    className={styles.image}
-                    src={props.image} >
-                
-                </img>
+                    <img 
+                        onClick={() => { redirectToNew(props.url) }}
+                        className={styles.newImage}
+                        src={props.image} >
+                    </img>
 
-                <h3 onClick={() => { redirectToNew(props.url) }} className={styles.title}>{props.title}</h3>
+                    <h3 onClick={() => { redirectToNew(props.url) }} className={styles.title}>{props.title}</h3>
+                </div>
+
+
+                <div className={styles.descriptionDiv}>
+                    <a
+                        className={styles.newDescription}>
+                        {props.description}
+                    </a>
+                </div>
+
+
             </div>
+            );
+    }
 
+    else if (props.type == "Quotes") {
+        return (
+            <div className={styles.quoteItem}>
+               
+                <h3 className={styles.quoteText}> "{props.quote}" </h3>
 
-            <div className={styles.descriptionDiv}>
-                <a
-                    className={styles.description}>
-                    {props.description}
-                </a>
+                <div className={styles.quoteAuthorDiv}>
+                    <h4
+                        className={styles.author}>
+                        — {props.author}
+                    </h4>
+                </div>
+
             </div>
-
-
-        </div>
-    );
+            );
+    }
 }
