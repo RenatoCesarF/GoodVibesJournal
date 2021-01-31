@@ -39,6 +39,12 @@ export default function HeaderMenu(props)  {
     return (
         <div>
             <ul className={styles.menu}>
+
+                <li className={styles.menuOption}>
+                    <h3
+                        className={tweetsOption}
+                        onClick={()=> choseOption("Tweets")}>Tweets</h3>
+                </li>
     
                 <li className={styles.menuOption} >
                     <h3 className={newsOption}
@@ -58,9 +64,5 @@ export default function HeaderMenu(props)  {
 }
 
   /*
-                <li className={styles.menuOption}>
-                    <h3
-                        className={tweetsOption}
-                        onClick={()=> choseOption("Tweets")}>Tweets</h3>
-                </li>
+                
   */

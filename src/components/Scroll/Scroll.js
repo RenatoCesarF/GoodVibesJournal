@@ -34,7 +34,11 @@ export default class Scroll extends Component{
             case "Quotes":
                 this.requestAPI('quotes')
                 break;
-        
+
+            case "Tweets":
+                this.requestAPI('twitter/allTweets')
+                break;
+
             default:
                 break;
         }
@@ -92,6 +96,12 @@ export default class Scroll extends Component{
 
                                 quote={index.text}
                                 author={index.author}
+
+                                twText={index.fullText}
+                                twMedia={index.mediaUrl}
+                                twUser={index.user}
+                                twUserPhoto={index.userPhoto}
+                                twLink={index.link} 
                             />
                         )
                     :

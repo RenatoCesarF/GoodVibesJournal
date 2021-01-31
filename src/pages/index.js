@@ -21,9 +21,7 @@ function Home() {
 
     return (
         <div >
-          
  
-
             <style jsx global >{`       
             html,body{
                     
@@ -45,8 +43,6 @@ function Home() {
             </div>
           
             <FaAngleDoubleDown className={styles.icon} onClick={ navToTimeLine}/>
-       
-           
          
         </div>  
     );

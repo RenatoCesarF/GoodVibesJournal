@@ -1,0 +1,16 @@
+.twMedia{
+    cursor: pointer;
+    border-radius:1vh ;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 2vh;
+}
+
+@media (max-width: 582px){
+    .twMedia{
+        width: 90%;
+        margin-bottom: 1vh;
+    }
+}

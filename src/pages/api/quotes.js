@@ -1,7 +1,7 @@
 var alreadyRequested = false
 var oldQuotes
-export default async function getQuote(request, response) {
 
+export default async function getQuote(request, response) {
   if (alreadyRequested) {
     response.setHeader('Cache-Controll', 's-maxage=10', 'stale-while-revalidate')
     response.json(oldQuotes)
