@@ -16,7 +16,6 @@ export default async function getUserTweets(require, response) {
         access_token_key: process.env.TWITTER_TOKEN,
         access_token_secret: process.env.TWITTER_TOKEN_SECRET
     });
-    try {
         let timeline = await client.get("statuses/user_timeline", {
             screen_name: user,
             exclude_replies: true,
@@ -55,9 +54,4 @@ export default async function getUserTweets(require, response) {
         );
 
         response.json(results)
-    }
-    catch {
-        response.json([{user: "Tweet unavailable"}])
-    }
-
 }

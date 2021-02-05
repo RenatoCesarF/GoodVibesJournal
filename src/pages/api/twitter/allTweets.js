@@ -45,8 +45,14 @@ export default async function getTweets(request, response) {
 }
 
 async function getFromUser(user) {
-    var url = `${HOST}/api/twitter/${user}`
-    const apiResponse = await fetch(url) //Getting tweets from this user
-    var tweets = await apiResponse.json(); //Transforming it into JSON
-    return tweets
+    try {
+        
+        var url = `${HOST}/api/twitter/${user}`
+        const apiResponse = await fetch(url) //Getting tweets from this user
+        var tweets = await apiResponse.json(); //Transforming it into JSON
+        return tweets
+    }
+    catch {
+        return([{user: "Tweet unavailable"}])
+    }
 }
