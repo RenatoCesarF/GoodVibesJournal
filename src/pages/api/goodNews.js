@@ -1,3 +1,5 @@
+import Sentiment from 'sentiment'
+
 
 export default async function getGoodNews(request, response) {
    //TODO: add an ID to each new, thus we can filter it
@@ -18,7 +20,7 @@ export default async function getGoodNews(request, response) {
 
     //Starting the analyzing system
     var articles = responseToJson.articles;
-    var Sentiment = require('sentiment');
+
     var sentiment = new Sentiment();
     
     var positiveArticles = {type: "News", data:[]};

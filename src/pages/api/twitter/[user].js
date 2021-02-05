@@ -26,6 +26,8 @@ export default async function getUserTweets(require, response) {
         tweet_mode: "extended",
         count: amount + 2
     });
+    
+    
 
     const results = timeline.map(x => {
         //Defining the midea URL
@@ -39,6 +41,10 @@ export default async function getUserTweets(require, response) {
                 mediaUrl = x.extended_entities.media[0].media_url
             }
         } 
+
+        //Deleting the HTTP part of the tittle
+        var httpLocal = x.full_text.lastIndexOf('http')
+        x.full_text = x.full_text.substring(0, httpLocal);
 
         return ({
             fullText: x.full_text,

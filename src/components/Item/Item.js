@@ -13,8 +13,7 @@ function redirectTo(url) {
 
 
 export default function Item(props) {
-    const [isPlaying, setIsPlaying] = useState(false)
-
+    
     if (props.type == "News") {
         return (
             <div className={styles.newItem}>

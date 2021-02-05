@@ -3,10 +3,10 @@ var oldQuotes
 
 export default async function getQuote(request, response) {
   if (alreadyRequested) {
+    var hours = 6
     response.setHeader('Cache-Controll', 's-maxage=10', 'stale-while-revalidate')
     response.json(oldQuotes)
     
-    var hours = 6
     setTimeout(() => {
       console.log("Youalready requested here")
     }, hours * 60 * 60 * 1000)

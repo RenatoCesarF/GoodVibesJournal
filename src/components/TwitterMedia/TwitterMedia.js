@@ -3,7 +3,7 @@ import styles from './TwitterMedia.module.css'
 function isImage(url) {
     if (url != null) {
         
-        if (url.includes('.jpg') || url.includes('.png')) {
+        if (url.includes('.jpg') || url.includes('.png') || url.includes('.gif')) {
             return true
         } else {
             return false
@@ -27,7 +27,7 @@ export default function TwitterMedia(props) {
                 :
                 (<video
                     playsInline
-                    controls="true"
+                    controls
                     className={styles.twMedia}
                     src={props.twMedia}
                 />
