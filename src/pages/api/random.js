@@ -1,8 +1,7 @@
 import shuffle from '../../utils/shuffle'
 
 
-//var HOST= 'https://goodvibesjornal.vercel.app'
-var HOST= 'http://localhost:3000'
+var HOST= process.env.HOST
 var alreadyRequested = false
 var oldRandom
 
