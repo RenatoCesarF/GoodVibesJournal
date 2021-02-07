@@ -1,6 +1,5 @@
 import Sentiment from 'sentiment'
 
-
 export default async function getGoodNews(request, response) {
    //TODO: add an ID to each new, thus we can filter it
     

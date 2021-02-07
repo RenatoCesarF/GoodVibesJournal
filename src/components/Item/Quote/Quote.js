@@ -3,7 +3,9 @@ import styles from './Quote.module.css'
 
 
 export default function Quote(props) {
-    
+    if (!props.author) {
+        props.author = "unknown"
+    }
     return (
         <div className={styles.quoteItem}>
                 

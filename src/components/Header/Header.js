@@ -7,7 +7,7 @@ function Header() {
 
     return (
         <header className={styles.header}>
-            <h1 onClick={()=>{router.back()}} className={styles.headerTitle}>Good Vibes</h1>
+            <h1 onClick={()=>{router.back()}} className={styles.headerTitle}>The Good Vibes Jornal</h1>
         </header>
     )
 }

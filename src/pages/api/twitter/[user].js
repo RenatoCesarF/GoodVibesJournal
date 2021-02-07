@@ -1,8 +1,5 @@
-/*
-TODO: Exclude text part when start https, deled all after https
-*/
-
 import Twitter from "twitter-lite"
+import next from 'next'
 
 export default async function getUserTweets(require, response) {
     const { query: { user } } = require
@@ -12,11 +9,12 @@ export default async function getUserTweets(require, response) {
     try{
         const client = new Twitter({
             subdomain: "api",
-            consumer_key: process.env.TWITTER_API_KEY,
-            consumer_secret: process.env.TWITTER_SECRET_API_KEY,
-            access_token_key: process.env.TWITTER_TOKEN,
-            access_token_secret: process.env.TWITTER_TOKEN_SECRET
+            consumer_key: process.env.T_API_KEY,
+            consumer_secret: process.env.T_SECRET_API_KEY,
+            access_token_key: process.env.T_TOKEN,
+            access_token_secret: process.env.T_TOKEN_SECRET
         })
+
         let timeline = await client.get("statuses/user_timeline", {
             screen_name: user,
             exclude_replies: true,
@@ -56,7 +54,8 @@ export default async function getUserTweets(require, response) {
 
         response.json(results)
     }
-    catch {
+    catch(error) {
+        console.log(error)
         response.json([{user: "Tweet unavailable"}])
     }
 }

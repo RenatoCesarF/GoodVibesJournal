@@ -1,8 +1,7 @@
 import shuffle from '../../utils/shuffle'
+import getHost from '../../utils/getHost'
 
-
-
-var HOST= "https://goodvibesjornal.vercel.app/"
+var HOST = getHost()
 var alreadyRequested = false
 var oldRandom
 

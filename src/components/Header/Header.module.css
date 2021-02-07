@@ -3,7 +3,7 @@
     font-style: normal;
      
     color: #ebebeb;
-    font-size: calc(25px + (40 - 25) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(25px + (35 - 25) * ((100vw - 300px) / (1600 - 300)));
     mix-blend-mode: normal;
     text-shadow: 0.1em 0.1em 0.07em rgba(0, 0, 0, 0.657);
     text-align: center;
