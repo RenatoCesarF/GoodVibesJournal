@@ -1,0 +1,38 @@
+/*Quotes OPTION*/
+.quoteItem{
+    background-color: #C4C4C4;
+    
+    border-radius: 30px;
+    margin-bottom: 2%;
+    margin-right: 1.2vw;
+
+    height: fit-content;
+    min-width: min-content;
+    min-height: fit-content;
+    box-shadow:  0vh 1vh 0.6vh #0000002c;
+
+    display: table-row-group;
+}
+.quoteText{
+    font-size: calc(14px + (18 - 14px) * ((100vw - 300px) / (1600 - 300)));
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    color: #2d2d2d;
+    margin-left: 2vh;
+    margin-right: 1vh;
+    margin-top: 4vh;
+    text-align: start;
+    cursor: text;
+}
+
+.quoteAuthorDiv{
+    margin-top: 2vh;
+    margin-left: 2vw;
+    margin-bottom: 4vh;
+    height: auto;
+}
+.author{
+    color: #2d2d2db0;
+}
+
+

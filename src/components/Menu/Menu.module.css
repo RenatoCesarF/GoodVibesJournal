@@ -1,4 +1,18 @@
+
+.scroller{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    margin: 0 auto;
+    overflow-x: scroll;
+    scroll-behavior:smooth;
+    scroll-margin: initial;
+
+}
+
 .menu{
+    margin:0;
+    padding:0;
     flex-grow: 1;
     margin-right: 8vw;
     display: flex;
@@ -8,6 +22,7 @@
     
 }
 .menuOption{
+    
     justify-content: center;
     display: flex;
     margin-left: 0.1vw;
@@ -17,16 +32,18 @@
 }
 
 .link{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
-    text-align: center;
-    color:#ebebeb9d;
+    margin-top:0;
+    margin-bottom:3vh;
+    padding-top:0;
+    padding-bottom:0;
     margin-right: 4vw;
     margin-left: 4vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
     align-items: center;
+    color:#ebebeb9d;
     font: bold;
     font-size: calc(10 + (100 - 10) * ((100vw - 300px) / (1600 - 300)));
-    padding: 1vw;
     cursor: pointer;
     transition: ease-in-out;
     -webkit-transition: all 0.3s;
@@ -41,10 +58,13 @@
     color:#ebebeb;
     font-size: 125%;
     text-shadow: 0.1em 0.1em 0.7em rgba(0, 0, 0, 0.726);
-
 }
 
 .selectedOption{
+    margin-top:0;
+    margin-bottom:3vh;
+    padding-top:0;
+    padding-bottom:0;
     cursor: pointer;
 
     transition: ease-in-out;
@@ -59,7 +79,6 @@
     align-items: center;
     font: bold;
     font-size: calc(10 + (100 - 10) * ((100vw - 300px) / (1600 - 300)));
-    padding: 1vw;
 
     border-bottom: 0.5vh solid #ebebeb80;
 
@@ -75,6 +94,6 @@
 
 @media (max-width: 768px){
     .menu{
-        margin-right: 6vw;        
+        margin-right: 2vw;        
     }
 }

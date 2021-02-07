@@ -3,15 +3,16 @@ import shuffle from '../../../utils/shuffle'
 var alreadyRequested = false
 var oldTweets 
 
-var HOST= 'https://goodvibesjornal.vercel.app'
-//var HOST= 'http://localhost:3000'
+//var HOST= 'https://goodvibesjornal.vercel.app'
+var HOST= 'http://localhost:3000'
 
 
 export default async function getTweets(request, response) {
     if (alreadyRequested) {
-        var hours = 3
+        var hours = 24
+        response.json(oldTweets)
+        
         setTimeout(() => {
-            response.json(oldTweets)
             console.log("Youalready requested here")
         }, hours * 60 * 60 * 1000)
     }
@@ -20,7 +21,7 @@ export default async function getTweets(request, response) {
             "LIVEpositivity",
             "911PSY",
             "PositivityPack",
-            "bestmemes69",
+            //"bestmemes69",
             "NeverthinkTV",
             "happyyouare"
         ]
@@ -36,23 +37,17 @@ export default async function getTweets(request, response) {
         }
     
         allTweets.data = shuffle(allTweets.data)
+        
+        response.json(allTweets)
 
         alreadyRequested = true
         oldTweets = allTweets 
-
-        response.json(allTweets)
     }
 }
 
 async function getFromUser(user) {
-    try {
-        
-        var url = `${HOST}/api/twitter/${user}`
-        const apiResponse = await fetch(url) //Getting tweets from this user
-        var tweets = await apiResponse.json(); //Transforming it into JSON
-        return tweets
-    }
-    catch {
-        return([{user: "Tweet unavailable"}])
-    }
+    var url = `${HOST}/api/twitter/${user}`
+    const apiResponse = await fetch(url) //Getting tweets from this user
+    var tweets = await apiResponse.json(); //Transforming it into JSON
+    return tweets
 }

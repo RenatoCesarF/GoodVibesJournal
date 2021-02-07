@@ -9,9 +9,7 @@ import styles from './Scroll.module.css';
 
 export default class Scroll extends Component{
     constructor(props) {
-    
         super(props);
-
         this.state = {
             timeline: null,
         };
@@ -27,6 +25,9 @@ export default class Scroll extends Component{
         
     render() {
         switch (this.props.option) {
+            case "Random":
+                this.requestAPI('random')
+                break;
             case "News":
                 this.requestAPI('goodNews')
                 break;
@@ -38,14 +39,11 @@ export default class Scroll extends Component{
             case "Tweets":
                 this.requestAPI('twitter/allTweets')
                 break;
-
-            default:
-                break;
         }
         return (
 
             <div className={styles.scroller} >
-                <style jsx global >{`  
+                <style >{`  
                 
                     ::-webkit-scrollbar{
                         position: relative;

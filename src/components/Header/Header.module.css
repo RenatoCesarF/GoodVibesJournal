@@ -7,15 +7,13 @@
     mix-blend-mode: normal;
     text-shadow: 0.1em 0.1em 0.07em rgba(0, 0, 0, 0.657);
     text-align: center;
-    margin-right: 5vw;
+    margin-right: 8vw;
 
-    padding-bottom: 1vh;
+    padding-top: -26vh;
+    padding-bottom: -26vh; 
     -webkit-text-stroke: 0.08em #2d2d2d52;
     -webkit-text-fill-color:  #ebebeb;
 
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
     user-select: none;
 }
 
@@ -24,6 +22,8 @@
     width: 100vw;
     margin: 0px;
     padding: 0px;
+    margin-bottom:3vh;
+    padding-bottom:0.5vh;
     box-shadow:  1vh 0.6vh  #00000018;
 
 }

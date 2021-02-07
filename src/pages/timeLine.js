@@ -15,7 +15,7 @@ import Scroll from '../components/Scroll/Scroll';
 
 export default class timeLine extends Component {
     state = {
-        option: "News"
+        option: "Random"
     }
 
     changeTimeline = (nextOption) => {
@@ -42,7 +42,6 @@ export default class timeLine extends Component {
                 `}
                     
                 </style>
-                
                 <Header/>
                 <Menu changeTimeline={this.changeTimeline}/>
                 <Scroll option={this.state.option}/>
