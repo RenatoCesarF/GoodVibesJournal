@@ -3,7 +3,7 @@ import shuffle from '../../../utils/shuffle'
 var alreadyRequested = false
 var oldTweets 
 
-var HOST= process.env.HOST
+var HOST= "https://goodvibesjornal.vercel.app/"
 
 
 export default async function getTweets(request, response) {
