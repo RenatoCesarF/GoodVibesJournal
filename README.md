@@ -2,7 +2,15 @@
 <img src="https://user-images.githubusercontent.com/62253156/107358119-61eef680-6aa9-11eb-87f0-5c5cd99ebdfa.png" width="1200"/>
 
 <h2> A Good Vibes Jornal to keep your soul alive in bad days </h2>
-
+<p align='center'>
+   <a href="https://gitmoji.carloscuesta.me">
+    <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+  </a>
+    <img src="https://img.shields.io/badge/With-NextJS-green?style=flat-square">
+	<img src="https://img.shields.io/badge/API-Twitter-blue?style=flat-square">
+    <!-- Budlers-->
+    
+</p>
 <br/>
 Every good thing that the internet can provides you, (or just the ones that gives me APIs):
 
