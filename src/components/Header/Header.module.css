@@ -1,3 +1,13 @@
+/* =============== Header styles == */
+.header{
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom:3vh;
+    padding-bottom:0.5vh;
+    box-shadow:  1vh 0.6vh  #00000018;
+}
+
 .headerTitle {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
@@ -7,7 +17,7 @@
     mix-blend-mode: normal;
     text-shadow: 0.1em 0.1em 0.07em rgba(0, 0, 0, 0.657);
     text-align: center;
-    margin-right: 8vw;
+    margin-right: 9.5vw;
 
     padding-top: -26vh;
     padding-bottom: -26vh; 
@@ -16,20 +26,96 @@
 
     user-select: none;
 }
+/*================ information icon styles == */
+.infoIcon{ 
+    cursor: pointer;
+    text-align: center;
+	position:fixed;
+	width:4.5vw;
+	height:4.5vh;
+	right:3vw;
+    padding-top:1vh;
+    color: #D4D0D2;
+    mix-blend-mode: normal;
+
+    transition: all 0.5s;
+
+    text-shadow: 0.1em 0.1em 0.07em rgba(0, 0, 0, 0.657);
+}
+
+.infoIcon:hover{
+    color:rgb(255, 255, 255);
+    width:5vw;
+	height:5vh;
+    text-shadow: 0 0 10px blue;
+}
+
+/*================ Close and open information configuration ==*/
+.closedInfos{
+    display: none;
+}
+.openedInfos{
+    width:30vw;
+	height:30vh;
+	right:3.5vw;
+    top: 8vh;
+    position:fixed;
+    background-color: #2d2d2d;
+    border-radius: 30px;
+}
+
+/* =============== inside information styles == */
+.informationDescription{
+    color: #D4D0D2;
+    text-align: center;
+
+}
+
+.peaceSymble{ 
+    color: #CBE8F7;
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+}
+
+.hearthSymble{
+    color:#fa4768; /*D02D28*/
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+}
 
 
-.header{
-    width: 100vw;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom:3vh;
-    padding-bottom:0.5vh;
-    box-shadow:  1vh 0.6vh  #00000018;
+/*================ Email stufs  ====*/
+.myEmailDiv{
+    padding-top: 4vh;
+    padding-right: 1vw;
+    padding-left: 1vw;
+}
+.emailText{
+    text-decoration: underline;
+    cursor:pointer;
+    color: #D4D0D2;
+    vertical-align: super;
+    padding-left: 0.8vw;
+}
+.emailSymble{
+    color: #6F40FF;
+    width:4vh;
+    height:4vh;
+}
 
+.gitSymble{
+    cursor:pointer;
+    color: #D4D0D2;
+    width:4vh;
+    height:4vh;
+    padding-top: 5vh;
 }
 
 @media (max-width: 768px){
     .headerTitle{
         margin-right: 0vw;   
+    }
+    .openedInfos{
+        width:95vw;
     }
 }

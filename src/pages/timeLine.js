@@ -23,13 +23,13 @@ export default class timeLine extends Component {
     }
 
     render() {
-        var dayFase = getDayFase();
-        
         return (
             <div>
                 <style jsx global >{`       
                 html,body{
-                        ${getDayColor(dayFase)}
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+                        ${getDayColor()}
                         margin: 0;
                         padding: 0;
                         background-size:100%;

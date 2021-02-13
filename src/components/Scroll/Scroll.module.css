@@ -19,9 +19,9 @@
     margin-top: 20vh;
 }
 
-@media (max-width: 768){
+@media (max-width: 766){
     .scroller{
-        margin-right: 0vw;        
+        margin-right: 25%;       
     }
 }
 @media (max-width: 544px){

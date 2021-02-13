@@ -8,12 +8,12 @@ export default function New(props) {
             <div className={styles.newHeader}>
 
                 <img 
-                    onClick={() => { props.redirectTo(props.url) }}
+                    onClick={() => {window.open(props.url) }}
                     className={styles.newImage}
                     src={props.image} >
                 </img>
 
-                <h3 onClick={() => { props.redirectTo(props.url) }} className={styles.title}>{props.title}</h3>
+                <h3 onClick={() => {window.open(props.url) }} className={styles.title}>{props.title}</h3>
             </div>
 
 

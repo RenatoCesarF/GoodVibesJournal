@@ -19,7 +19,7 @@ export default function TwitterMedia(props) {
                     
                 (<img
                     onClick={() => {
-                        props.redirectTo(props.twMedia)
+                        window.open(props.twMedia)
                     }}
                     className={styles.twMedia}
                     src={props.twMedia} >

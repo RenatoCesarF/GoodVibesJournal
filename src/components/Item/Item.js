@@ -4,10 +4,6 @@ import New from './New/New'
 import Quote from './Quote/Quote'
 import Tweet from './Tweet/Tweet'
 
-function redirectTo(url) {
-    window.open(url)
-}
-
 export default function Item(props) {
     
     if (props.type == "News") {
@@ -17,7 +13,6 @@ export default function Item(props) {
                 description={props.description}
                 image={props.image}
                 url={props.url}
-                redirectTo={redirectTo}
             />
             )
     }
@@ -40,7 +35,6 @@ export default function Item(props) {
                 twLink={props.twLink}
                 twText={props.twText}
                 twMedia={props.twMedia}
-                redirectTo={redirectTo}
             />
         )
     }
@@ -54,7 +48,6 @@ export default function Item(props) {
                 twLink={props.twLink}
                 twText={props.twText}
                 twMedia={props.twMedia}
-                redirectTo={redirectTo}
                 /> 
                 )
         }
@@ -65,7 +58,6 @@ export default function Item(props) {
                     description={props.description}
                     image={props.image}
                     url={props.url}
-                    redirectTo={redirectTo}
                 />
                 )
         }

@@ -1,15 +1,53 @@
 import styles from './Header.module.css'
-import { useRouter } from 'next/router'
+import { CgInfo } from 'react-icons/cg'
+import { FaPeace,FaHeart, FaGithub } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
+import React, { useState } from 'react'
 
 
-function Header() {   
-    const router = useRouter()
+export default function Header() {
+    const [infosStyle, setInfosStyle] = useState(styles.closedInfos)
 
-    return (
+    function showInfo() {
+        if (infosStyle == styles.closedInfos) {
+            setInfosStyle(styles.openedInfos)
+        } else {   
+            setInfosStyle(styles.closedInfos)
+        }
+    } 
+  
+    return(
         <header className={styles.header}>
-            <h1 onClick={()=>{router.back()}} className={styles.headerTitle}>The Good Vibes Jornal</h1>
-        </header>
-    )
-}
+            <CgInfo
+                className={styles.infoIcon}
+                onClick={showInfo}
+            />
+            <h1 className={styles.headerTitle}>The Good Vibes Jornal</h1>
+            <div className={infosStyle}>
+                <h3 className={styles.informationDescription}>
+                    {`Made with`}
+                    <FaPeace className={styles.peaceSymble} />
+                    {"and"}
+                    <FaHeart className={styles.hearthSymble}/>
+                    {'by Renato Cesar'}
+                    <br />
+                    
+                    <div  className={styles.myEmailDiv} >
+                        {'Any sugestion or feedback send it to: '}
+                        <br />
 
-export default Header
+                        <MdEmail className={styles.emailSymble } href="mailto:re.fbarcellos@hotmail.com"/>
+                        <a className={styles.emailText} href="mailto:re.fbarcellos@hotmail.com" >
+                            re.fbarcellos@hotmail.com
+                        </a>
+                    </div>
+
+                    <FaGithub
+                        className={styles.gitSymble}
+                        onClick={() => {window.open("https://github.com/RenatoCesarF/GoodVibesJornal") }}
+                    />
+                </h3>
+            </div>
+        </header>
+        )
+}

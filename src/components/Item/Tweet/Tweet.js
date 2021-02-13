@@ -11,7 +11,7 @@ export default function Tweet(props) {
             <div
                 className={styles.twHeader}
                     onClick={() => {
-                        props.redirectTo(props.twLink)
+                        window.open(props.twLink)
                     }}
             >
                     <img 
@@ -32,7 +32,6 @@ export default function Tweet(props) {
             {props.twMedia != null ?
                 (
                         <TwitterMedia
-                            redirectTo={props.redirectTo}
                             twMedia={props.twMedia}
                             className={styles.twMedia}
                         />

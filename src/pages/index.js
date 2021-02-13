@@ -8,8 +8,6 @@ import { getDayFase, getDayColor } from '../utils/dayMomentSystem';
 
 function Home() {    
     const [titleState, setTitleState] = useState(styles.title);
-
-    var dayFase = getDayFase();
     
     const navToTimeLine = () => {        
         setTitleState(styles.titleGoing);
@@ -25,7 +23,7 @@ function Home() {
             <style jsx global >{`       
             html,body{
                     
-                    ${getDayColor(dayFase)}
+                    ${getDayColor()}
                     margin: 0;
                     padding: 0;
                     background-size:100%;
@@ -39,7 +37,7 @@ function Home() {
                 
             </style>
             <div>
-                <h1 className={titleState} >Good <br/>{dayFase}</h1>
+                <h1 className={titleState} >Good <br/>{getDayFase()}</h1>
             </div>
           
             <FaAngleDoubleDown className={styles.icon} onClick={ navToTimeLine}/>
