@@ -80,8 +80,7 @@ export default class Scroll extends Component{
                     }
                 `}
                 </style>
-               
-                {this.state.timeline
+                { this.state.timeline && this.props.isReady
                     ?
                         this.state.timeline.data.map((index) =>
                             <Item
@@ -112,23 +111,9 @@ export default class Scroll extends Component{
                         />
                     )
                 }
-        
-        
             </div>
-
         );
-
-        }
-
-       
-    
+    }
 }
 
 export var scrollController = new Scroll();
-
-
-
-/*
-
-
-*/

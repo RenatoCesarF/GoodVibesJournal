@@ -31,10 +31,10 @@
     cursor: pointer;
     text-align: center;
 	position:fixed;
-	width:4.5vw;
-	height:4.5vh;
+	width:6vw;
+	height:6vh;
 	right:3vw;
-    padding-top:1vh;
+    padding-top:-1.5vh;
     color: #D4D0D2;
     mix-blend-mode: normal;
 
@@ -45,8 +45,8 @@
 
 .infoIcon:hover{
     color:rgb(255, 255, 255);
-    width:5vw;
-	height:5vh;
+    width:6.5vw;
+	height:6.5vh;
     text-shadow: 0 0 10px blue;
 }
 
@@ -83,7 +83,6 @@
     padding-left: 0.5vw;
 }
 
-
 /*================ Email stufs  ====*/
 .myEmailDiv{
     padding-top: 4vh;
@@ -118,4 +117,5 @@
     .openedInfos{
         width:95vw;
     }
+    
 }

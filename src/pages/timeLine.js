@@ -11,15 +11,33 @@ import Header from '../components/Header/Header';
 import Menu from '../components/Menu/Menu';
 import Scroll from '../components/Scroll/Scroll';
 
-
-
 export default class timeLine extends Component {
     state = {
-        option: "Random"
+        option: "Random",
+        isReady: true
     }
 
     changeTimeline = (nextOption) => {
         this.setState({ option: nextOption })
+
+        this.setState({isReady:false })
+        console.log(this.state.isReady)
+        
+        var seconds =2 
+        switch (nextOption) {
+            case "Random": 
+                seconds = 3
+                break
+            case "Tweets":
+                seconds = 5
+                break
+        }
+
+        setTimeout(() => {
+            console.log(this.state.isReady)
+            this.setState({isReady: true})
+        },seconds* 1000)
+
     }
 
     render() {
@@ -44,7 +62,10 @@ export default class timeLine extends Component {
                 </style>
                 <Header/>
                 <Menu changeTimeline={this.changeTimeline}/>
-                <Scroll option={this.state.option}/>
+                <Scroll
+                    option={this.state.option}
+                    isReady={this.state.isReady}
+                />
             </div>
         );
     }
