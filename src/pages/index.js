@@ -1,7 +1,7 @@
 import { FaAngleDoubleDown} from 'react-icons/fa';
 import { render } from "react-dom";
 import React,{ useState } from 'react'
-
+import Head from 'next/head'
 import styles from"../styles/index.module.css"
 import { getDayFase, getDayColor } from '../utils/dayMomentSystem';
 
@@ -19,7 +19,12 @@ function Home() {
 
     return (
         <div >
- 
+        <Head>
+            <link rel="shortcut icon" href='../../static/icon_unfilled.ico'/>
+            <title>Good Vibes Jornal</title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        </Head>
+        
             <style jsx global >{`       
             html,body{
                     
@@ -42,7 +47,8 @@ function Home() {
           
             <FaAngleDoubleDown className={styles.icon} onClick={ navToTimeLine}/>
          
-        </div>  
+        </div> 
+
     );
 }
 

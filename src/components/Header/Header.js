@@ -3,8 +3,8 @@ import { CgInfo } from 'react-icons/cg';
 import { FaPeace,FaHeart, FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import React, { useState } from 'react';
-import Image from 'next/image';
 import logo from '../../../assets/logo.png'
+
 export default function Header() {
     const [infosStyle, setInfosStyle] = useState(styles.closedInfos)
 

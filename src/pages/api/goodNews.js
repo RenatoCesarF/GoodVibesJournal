@@ -3,14 +3,8 @@ import Sentiment from 'sentiment'
 export default async function getGoodNews(request, response) {
    //TODO: add an ID to each new, thus we can filter it
     
-    //Getting user country
-    //const country = Intl.DateTimeFormat().resolvedOptions().locale;
-    //const countryCode = country[3] + country[4];
-    
     //Configurating the NewsAPI request 
     var url = 'http://newsapi.org/v2/top-headlines?' +
-        //`q=${subject}&`+ //TO use it, need to change the "top-headlines" to "everything"
-        //`country=${countryCode}&` +
         `country=us&` +
         `apiKey=${process.env.NEWS_API_KEY}`;
     

@@ -26,24 +26,6 @@
     box-shadow:  1vh 0.6vh  #00000018;
 }
 
-.headerTitle {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-     
-    color: #ebebeb;
-    font-size: calc(25px + (35 - 25) * ((100vw - 300px) / (1600 - 300)));
-    mix-blend-mode: normal;
-    text-shadow: 0.1em 0.1em 0.07em rgba(0, 0, 0, 0.657);
-    text-align: center;
-    margin-right: 9.5vw;
-
-    padding-top: -26vh;
-    padding-bottom: -26vh; 
-    -webkit-text-stroke: 0.08em #2d2d2d52;
-    -webkit-text-fill-color:  #ebebeb;
-
-    user-select: none;
-}
 /*================ information icon styles == */
 .infoIcon{ 
     cursor: pointer;
@@ -52,7 +34,7 @@
 	width:6vw;
 	height:6vh;
 	right:3vw;
-    padding-top:-1.5vh;
+    padding-top:2vmax;
     color: #D4D0D2;
     mix-blend-mode: normal;
 
