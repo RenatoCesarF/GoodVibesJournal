@@ -1,7 +1,9 @@
 
-<img src="https://user-images.githubusercontent.com/62253156/107358119-61eef680-6aa9-11eb-87f0-5c5cd99ebdfa.png" width="1200"/>
-
+<a  href="https://goodvibesjornal.vercel.app/">
+<img src="https://user-images.githubusercontent.com/62253156/111234059-2671ab80-85c4-11eb-85aa-a9fa8a5c7767.png" width="1200"/>
+</a>
 <h2> A Good Vibes Jornal to keep your soul alive in bad days </h2>
+<h2> 🖱️ Access in : https://goodvibesjornal.vercel.app/ </h2>
 <p align='center'>
    <a href="https://gitmoji.carloscuesta.me">
     <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -11,6 +13,7 @@
     <!-- Budlers-->
     
 </p>
+
 <br/>
 Every good thing that the internet can provides you, (or just the ones that gives me APIs):
 
@@ -61,10 +64,15 @@ Maybe a website to bring you good vibes for your day, just happy news, no accoun
 
 ### :warning: Bugs: :warning:
 - The TimeLine reload out of the blue
-- Some times the random option doesn't load first, you need to open the anotherones first
+- Some times the random option doesn't load, you need to open the anotherones first
 - Thus the page doesn't reload to update the Timeline, sometimes it have some fliks to reload
 
 ### :crystal_ball: Future implefmentations
+- [ ] Server Side Props
+- [ ] Add moree Twitter Accounts (receving sujestions)
 - A better system to filter the bad news 
 - Add more timelines options with another APIs
 - BigPicture mode to just see the TimeLine
+
+
+<h2> 🖱️ Access in : https://goodvibesjornal.vercel.app/ </h2>
