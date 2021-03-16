@@ -51,7 +51,6 @@ export default class Scroll extends Component{
                         width: 0.6rem;
                         border-radius: 5px;
                         cursor: pointer;
-                        
                         margin-left: 2vw;
                     }
                     
@@ -65,7 +64,6 @@ export default class Scroll extends Component{
                         cursor: pointer;
                         background: #2d2d2d70;
                         border-radius: 5px;
-
                     }
                     
                     /* Handle on hover */
@@ -75,7 +73,6 @@ export default class Scroll extends Component{
                     
                     @media(max-width: 768px){
                         ::-webkit-scrollbar{
-                            
                         }
                     }
                 `}

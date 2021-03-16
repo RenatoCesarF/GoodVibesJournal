@@ -4,7 +4,7 @@ export function getDayFase() {
     var dayFase;
     var time = new Date().getHours();
 
-    if (time > 4 && time < 12) {
+    if (time > 4 && time < 11) {
         dayFase = "Morning";
     }
     else if (time >= 12 && time < 18) {        

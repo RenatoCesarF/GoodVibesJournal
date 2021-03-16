@@ -1,10 +1,10 @@
-import styles from './Header.module.css'
-import { CgInfo } from 'react-icons/cg'
-import { FaPeace,FaHeart, FaGithub } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
-import React, { useState } from 'react'
-
-
+import styles from './Header.module.css';
+import { CgInfo } from 'react-icons/cg';
+import { FaPeace,FaHeart, FaGithub } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import React, { useState } from 'react';
+import Image from 'next/image';
+import logo from '../../../assets/logo.png'
 export default function Header() {
     const [infosStyle, setInfosStyle] = useState(styles.closedInfos)
 
@@ -22,7 +22,10 @@ export default function Header() {
                 className={styles.infoIcon}
                 onClick={showInfo}
             />
-            <h1 className={styles.headerTitle}>The Good Vibes Jornal</h1>
+            <img
+       src={logo}
+      className={styles.logo}
+     />
             <div className={infosStyle}>
                 <h3 className={styles.informationDescription}>
                     {`Made with`}

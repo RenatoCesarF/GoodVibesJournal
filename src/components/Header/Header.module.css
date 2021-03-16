@@ -1,5 +1,23 @@
 /* =============== Header styles == */
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 33%;
+    width: 25%;
+}
+
+@media (max-width: 582px){
+    .logo{
+        width: 75%;
+        margin-left: auto;
+    }
+}
+
 .header{
+    align-items: center;
+    align-content: center;
+    
     width: 100vw;
     margin: 0px;
     padding: 0px;
