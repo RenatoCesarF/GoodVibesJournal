@@ -2,12 +2,11 @@
     display: grid;
     grid-template-columns: 1fr;
     width: 50vw;
-    height: 34em;
-    max-height: 70vh;
+    height: 76.5vh;
     margin: 0 auto;
     overflow-y: scroll;
     scroll-behavior: auto;
-    margin-right: 29%;
+    margin-right: 27%;
 }
 
 .loading{
@@ -27,7 +26,6 @@
 @media (max-width: 544px){
     .scroller{
         width: 90vw;
-        max-height: 68vh;
         
         margin-right: 3vw;
     }

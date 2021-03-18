@@ -19,13 +19,14 @@ export default function Header() {
     return(
         <header className={styles.header}>
             <CgInfo
+            size="5%"
                 className={styles.infoIcon}
                 onClick={showInfo}
             />
             <img
-       src={logo}
-      className={styles.logo}
-     />
+                src={logo}
+                className={styles.logo}
+            />
             <div className={infosStyle}>
                 <h3 className={styles.informationDescription}>
                     {`Made with`}

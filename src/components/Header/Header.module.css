@@ -1,9 +1,8 @@
 /* =============== Header styles == */
 .logo{
     display: block;
-    margin-left: auto;
     margin-right: auto;
-    margin-left: 33%;
+    margin-left: 35%;
     width: 25%;
 }
 
@@ -31,12 +30,11 @@
     cursor: pointer;
     text-align: center;
 	position:fixed;
-	width:6vw;
-	height:6vh;
 	right:3vw;
-    padding-top:2vmax;
+    top:2vmax;
     color: #D4D0D2;
     mix-blend-mode: normal;
+ 
 
     transition: all 0.5s;
 
@@ -45,8 +43,7 @@
 
 .infoIcon:hover{
     color:rgb(255, 255, 255);
-    width:6.5vw;
-	height:6.5vh;
+    size:150%;
     text-shadow: 0 0 10px blue;
 }
 

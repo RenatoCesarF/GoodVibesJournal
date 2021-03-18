@@ -18,7 +18,7 @@ function Home() {
    }
 
     return (
-        <div >
+        <div>
         <Head>
             <link rel="shortcut icon" href='../../static/icon_unfilled.ico'/>
             <title>Good Vibes Jornal</title>
@@ -28,24 +28,24 @@ function Home() {
             <style jsx global >{`       
             html,body{
                     
-                    ${getDayColor()}
-                    margin: 0;
-                    padding: 0;
-                    background-size:100%;
-                    
-                    width: 100%;
-                    height:100%;
-                    overflow: hidden;
+                ${getDayColor()}
+                margin: 0;
+                padding: 0;
+                background-size:100%;
+                
+                width: 100%;
+                height:100%;
+                overflow: hidden;
 
                 }
             `}
-                
             </style>
+                
             <div>
                 <h1 className={titleState} >Good <br/>{getDayFase()}</h1>
             </div>
           
-            <FaAngleDoubleDown className={styles.icon} onClick={ navToTimeLine}/>
+            <FaAngleDoubleDown className={styles.icon} onClick={ navToTimeLine} size="3rem"/>
          
         </div> 
 
