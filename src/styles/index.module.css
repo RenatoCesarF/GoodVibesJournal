@@ -113,15 +113,14 @@
 }
 
 
-/*
+
 @media (max-width: 900px){
     .icon{
-        padding-top: 8vh;
+        margin-top: 10em;
     }
 }
 @media (max-width: 600px) { 
     .icon {
-        padding-top: 20vh;
+        margin-top: 9em;
     }
 }
-*/

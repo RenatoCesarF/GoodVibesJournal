@@ -20,13 +20,14 @@
 
 @media (max-width: 766){
     .scroller{
+        height: 72.5vh;
         margin-right: 25%;       
     }
 }
 @media (max-width: 544px){
     .scroller{
         width: 90vw;
-        
+        height: 72.5vh;
         margin-right: 3vw;
     }
 }
