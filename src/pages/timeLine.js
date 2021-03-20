@@ -22,7 +22,7 @@ export default class timeLine extends Component {
         this.setState({ option: nextOption })
 
         this.setState({isReady:false })
-        console.log(this.state.isReady)
+        //console.log(this.state.isReady)
         
         var seconds =2 
         switch (nextOption) {
@@ -35,7 +35,7 @@ export default class timeLine extends Component {
         }
 
         setTimeout(() => {
-            console.log(this.state.isReady)
+            //console.log(this.state.isReady)
             this.setState({isReady: true})
         },seconds* 1000)
 
@@ -65,8 +65,8 @@ export default class timeLine extends Component {
                         overflow: hidden;
                     }
                 `}
-                    
                 </style>
+                    
                 <Header/>
                 <Menu changeTimeline={this.changeTimeline}/>
                 <Scroll

@@ -24,22 +24,8 @@ export default class Scroll extends Component{
     }
         
     render() {
-        switch (this.props.option) {
-            case "Random":
-                this.requestAPI('random')
-                break;
-            case "News":
-                this.requestAPI('goodNews')
-                break;
                 
-            case "Quotes":
-                this.requestAPI('quotes')
-                break;
 
-            case "Tweets":
-                this.requestAPI('twitter/allTweets')
-                break;
-        }
         return (
 
             <div className={styles.scroller} >
