@@ -1,47 +1,34 @@
-import React, {useState} from 'react'
-import 'react-dom'
-import 'next'
-
+import React, {useState} from 'react';
+import 'react-dom';
+import 'next';
+import ListItems from '../../utils/enum';
 import styles from './Menu.module.css'
 
 
 export default function HeaderMenu(props)  {
 
-    const [newsOption, setNewsOption] = useState(styles.link)
-    const [tweetsOption, settweetsOption] = useState(styles.link)
-    const [quotesOption, setQuotesOption] = useState(styles.link)
-    const [randomOption, setRandomOption] = useState(styles.selectedOption)
+    const [option, setOption] = useState(ListItems[0].name)
+    
 
     //Set the timeLine as news to start selectedOption
     function choseOption(option) {
-        //Set all as unselected, then see witch one to set as selected
-        setNewsOption(styles.link)
-        setQuotesOption(styles.link)
-        settweetsOption(styles.link)
-        setRandomOption(styles.link)
+        console.log(option)
+
+        let =
+        setOption(option)
     
-        switch (option) {
-            case "Tweets":
-                settweetsOption(styles.selectedOption)
-                props.changeTimeline("Tweets")
-                break
-            case "News":
-                setNewsOption(styles.selectedOption)
-                props.changeTimeline("News")
-                break   
-            
-            case "Random":
-                setRandomOption(styles.selectedOption)
-                props.changeTimeline("Random")
-                break
-                
-            case "Quotes":
-                setQuotesOption(styles.selectedOption)
-                props.changeTimeline("Quotes")
-                break
-        }
-            
+        // if(option === ListItems[0].name){
+        // }
+        // if(option === ListItems[1].name){
+        // }
+        // if(option === ListItems[2].name){
+        // }
+        // if(option === ListItems[3].name){
+        // }
+        
+        props.changeTimeline(option)
     }
+
     return (
         <div className={styles.scroller}>
             <style>{`  
@@ -65,27 +52,19 @@ export default function HeaderMenu(props)  {
             `}
             </style>
             <ul className={styles.menu}>
-
-                <li className={styles.menuOption}>
-                    <h3
-                        className={tweetsOption}
-                        onClick={()=> choseOption("Tweets")}>Tweets</h3>
-                </li>
+                {
+                    ListItems.map((item, key) =>{
+                        return(
+                            <li key={key} className={styles.menuOption}>
+                                <h3
+                                    className={option}
+                                    onClick={()=> choseOption(item.name)}>{item.name}
+                                </h3>
+                            </li>
+                        )
+                    })
+                }
     
-                <li className={styles.menuOption} >
-                    <h3 className={newsOption}
-                        onClick={() => choseOption("News")}>News</h3>
-                </li >
-                <li className={styles.menuOption} >
-                    <h3 className={randomOption}
-                        onClick={() => choseOption("Random")}>Random</h3>
-                </li >
-
-                <li className={styles.menuOption}>
-                    <h3 className={quotesOption}
-                        onClick={() => choseOption("Quotes")}>Quotes</h3>
-                </li>
-            
             </ul>
         </div>
 
