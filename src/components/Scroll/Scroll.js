@@ -3,7 +3,7 @@ import Next from 'next';
 import axios from "axios";
 import ReactLoading from 'react-loading'
 
-import Item from '../Item/Item';
+import Item from '../Item/random';
 import styles from './Scroll.module.css';
 
 
@@ -33,7 +33,6 @@ export default class Scroll extends Component{
                 
                     ::-webkit-scrollbar{
                         position: relative;
-                        background: rgba(0, 0, 0, .1);
                         width: 0.6rem;
                         border-radius: 5px;
                         cursor: pointer;
@@ -63,6 +62,7 @@ export default class Scroll extends Component{
                     }
                 `}
                 </style>
+
                 { this.state.timeline && this.props.isReady
                     ?
                         this.state.timeline.data.map((index) =>

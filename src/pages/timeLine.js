@@ -1,12 +1,13 @@
 import { render } from "react-dom";
 import React,{ Component, useState } from 'react'
+import Head from 'next/head'
 
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 
 import { getDayFase, getDayColor } from '../utils/dayMomentSystem';
-import Head from 'next/head'
+
 
 import Header from '../components/Header/Header';
 import Menu from '../components/Menu/Menu';
@@ -18,27 +19,9 @@ export default class timeLine extends Component {
         isReady: true
     }
 
-    changeTimeline = (nextOption) => {
-        this.setState({ option: nextOption })
-
-        this.setState({isReady:false })
-        //console.log(this.state.isReady)
-        
-        var seconds =2 
-        switch (nextOption) {
-            case "Random": 
-                seconds = 3
-                break
-            case "Tweets":
-                seconds = 5
-                break
-        }
-
-        setTimeout(() => {
-            //console.log(this.state.isReady)
-            this.setState({isReady: true})
-        },seconds* 1000)
-
+    listenMenu = (selectedOption) => {
+        this.setState({ option: selectedOption })
+        console.log(selectedOption)
     }
 
     render() {
@@ -68,11 +51,8 @@ export default class timeLine extends Component {
                 </style>
                     
                 <Header/>
-                <Menu changeTimeline={this.changeTimeline}/>
-                <Scroll
-                    option={this.state.option}
-                    isReady={this.state.isReady}
-                />
+                <Menu listenMenu={this.listenMenu}/>
+                <Scroll option={this.state.option}/>
             </div>
         );
     }
