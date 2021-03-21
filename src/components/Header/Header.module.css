@@ -27,12 +27,16 @@
 
 /*================ information icon styles == */
 .infoIcon{ 
+
     cursor: pointer;
     text-align: center;
 	position:fixed;
 	right:3vw;
     top:2vmax;
-    color: #D4D0D2;
+    
+    width: 3rem;
+    height: 3rem;
+    color: #e6d8cf;
     mix-blend-mode: normal;
  
 
@@ -46,7 +50,6 @@
     size:150%;
     text-shadow: 0 0 10px blue;
 }
-
 /*================ Close and open information configuration ==*/
 .closedInfos{
     display: none;
@@ -116,3 +119,14 @@
     }
     
 }
+
+@media (max-width: 544px){
+    .infoIcon{
+        right:0.3rem;
+        padding-top: 2vh;
+        width: 1.6rem;
+        height:1.6rem;
+    }
+}
+
+
