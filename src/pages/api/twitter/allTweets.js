@@ -9,7 +9,7 @@ var HOST= getHost()
 
 export default async function getTweets(request, response) {
     if (alreadyRequested) {
-        var hours = 24
+        var hours = 6
         response.json(oldTweets)
         
         setTimeout(() => {
@@ -18,10 +18,9 @@ export default async function getTweets(request, response) {
     }
     else {
         const users = [
-            "LIVEpositivity",
-            "911PSY",
-            "PositivityPack",
             //"bestmemes69",
+            "sacoliro",
+            "cuteevideos",
             "NeverthinkTV",
             "happyyouare"
         ]

@@ -1,41 +1,39 @@
 import React, {useState} from 'react';
 import 'react-dom';
 import 'next';
-import ListItems from '../../utils/enum';
+import ListItems from '../../utils/menuItems';
 import styles from './Menu.module.css'
 
 
 export default function HeaderMenu(props)  {
-
     //Set the timeLine as news to start selectedOption
     function choseOption(option) {
         ListItems.map((items) => {return items.control = false})
         ListItems.filter((items) => { return items.name === option.name ?  items : null })[0].control = true
-        props.changeTimeline(option.name)
+        props.listenMenu(option.name)
     }
 
     return (
         <div className={styles.scroller}>
             <style>{`  
-                
-                ::-webkit-scrollbar{
-                    position: relative;
-                    height:0rem;
-                    cursor: pointer;
+                    ::-webkit-scrollbar{
+                        position: relative;
+                        height:0rem;
+                        cursor: pointer;
+                    }
+                    
+                    /* Track */
+                    ::-webkit-scrollbar-track {
+                    }
+                    
+                    /* Handle */
+                    ::-webkit-scrollbar-thumb {
+                        cursor: pointer;
+                        border-radius: 5px;
+                    }`
                 }
-                
-                /* Track */
-                ::-webkit-scrollbar-track {
-                }
-                
-                /* Handle */
-                ::-webkit-scrollbar-thumb {
-                    cursor: pointer;
-                    border-radius: 5px;
-                }
-                
-            `}
             </style>
+
             <ul className={styles.menu}>
                 {
                     ListItems.map((item, key) =>{
