@@ -23,7 +23,6 @@ function Home() {
             <link rel="shortcut icon" href='../../static/icon_unfilled.ico'/>
             <title>Good Vibes Jornal</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            {/* <meta name="theme-color" content={getHeaderDayColor()} /> */}
         </Head>
         
             <style jsx global >{`       
@@ -46,7 +45,7 @@ function Home() {
                 <h1 className={titleState} >Good <br/>{getDayFase()}</h1>
             </div>
           
-            <FaAngleDoubleDown className={styles.icon} onClick={ navToTimeLine} size="3rem"/>
+            <FaAngleDoubleDown className={styles.icon} onClick={navToTimeLine} size="3rem"/>
          
         </div> 
 
