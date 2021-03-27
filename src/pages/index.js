@@ -23,7 +23,7 @@ function Home() {
             <link rel="shortcut icon" href='../../static/icon_unfilled.ico'/>
             <title>Good Vibes Jornal</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            <meta name="theme-color" content={getHeaderDayColor()} />
+            {/* <meta name="theme-color" content={getHeaderDayColor()} /> */}
         </Head>
         
             <style jsx global >{`       
