@@ -10,7 +10,7 @@ import Quote from '../components/Item/Quote/Quote'
 import Tweet from '../components/Item/Tweet/Tweet'
 import New from '../components/Item/New/New'
 
-import { getDayFase, getDayColor } from '../utils/dayMomentSystem';
+import { getDayFase, getDayColor,getHeaderDayColor   } from '../utils/dayMomentSystem';
 import ListItens from '../utils/menuItems'
 
 import Header from '../components/Header/Header';
@@ -25,14 +25,15 @@ export default class timeLine extends Component {
     listenMenu = (selectedOption) => {
         this.setState({ option: selectedOption })
     }
-
+   
     render() {
         return (
             <div>
                 <Head>
                     <link rel="shortcut icon" href='../../static/icon_unfilled.ico'/>
                     <title>Good Vibes Jornal</title>
-                    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+                    <meta name="theme-color" content={getHeaderDayColor()} />
                 </Head>
  
                 <style jsx global >{`       

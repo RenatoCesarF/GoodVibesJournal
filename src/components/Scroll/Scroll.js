@@ -73,9 +73,8 @@ export default function Scroll(props) {
             </style>
             {
                 data !=null?
-                    data.length < 1?
-                        data.map((x, key) =>{
-                            return  props.timelineOption.name == ListItems[0].name?
+                    data.map((x, key) =>{
+                        return  props.timelineOption.name == ListItems[0].name?
                             <Tweet
                                 key={key}
                         
@@ -86,7 +85,7 @@ export default function Scroll(props) {
                                 twLink={x.link} 
                             />
                             :
-                            props.timelineOption.name == ListItems[1].name?
+                        props.timelineOption.name == ListItems[1].name?
                             <New
                                 key={key}
                         
@@ -95,46 +94,41 @@ export default function Scroll(props) {
                                 description={x.description}
                                 image={x.urlToImage}
                                 url={x.url}
-                            />:
-                            props.timelineOption.name == ListItems[2].name?
+                            />
+                            :
+                        props.timelineOption.name == ListItems[2].name?
                             <Random
-                            type={props.timelineOption.name}
-                            title={x.title}
-                            description={x.description}
-                            image={x.urlToImage}
-                            url={x.url}
+                                type={props.timelineOption.name}
+                                title={x.title}
+                                description={x.description}
+                                image={x.urlToImage}
+                                url={x.url}
 
-                            key={key}
+                                key={key}
 
-                            quote={x.text}
-                            author={x.author}
+                                quote={x.text}
+                                author={x.author}
 
-                            twText={x.fullText}
-                            twMedia={x.mediaUrl}
-                            twUser={x.user}
-                            twUserPhoto={x.userPhoto}
-                            twLink={x.link} 
-                        />:
+                                twText={x.fullText}
+                                twMedia={x.mediaUrl}
+                                twUser={x.user}
+                                twUserPhoto={x.userPhoto}
+                                twLink={x.link} 
+                            />:
                         props.timelineOption.name == ListItems[3].name?
-                        <Quote
+                            <Quote
                                 key={key}
                                 quote={x.text}
                                 author={x.author}
-                        />
-                        :
-                        <ReactLoading
-                            type={"bubbles"}
-                            color={"#C4C4C4"}
-                            className={styles.loading}
-                        />
-                            
-                        })
-                    :    
+                            />
+                    :
                     <ReactLoading
                         type={"bubbles"}
                         color={"#C4C4C4"}
                         className={styles.loading}
                     />
+                        
+                    })
                 :    
                 <ReactLoading
                     type={"bubbles"}

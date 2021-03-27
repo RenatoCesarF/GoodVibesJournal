@@ -7,11 +7,21 @@ import styles from './Menu.module.css'
 
 export default function HeaderMenu(props)  {
     //Set the timeLine as news to start selectedOption
+    function scrollToTop() {
+        const timelineComponent = document.getElementById('timeline');
+        timelineComponent.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }
+
     function chooseOption(option) {
+        scrollToTop()
         ListItems.map((items) => {return items.control = false})
         ListItems.filter((items) => { return items.name === option.name ?  items : null })[0].control = true
         props.listenMenu(option)
     }
+ 
 
     return (
         <div className={styles.scroller}>

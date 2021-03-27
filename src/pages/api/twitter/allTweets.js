@@ -19,6 +19,7 @@ export default async function getTweets(request, response) {
     else {
         const users = [
             //"bestmemes69",
+            "tinycarebot",
             "sacoliro",
             "cuteevideos",
             "NeverthinkTV",
