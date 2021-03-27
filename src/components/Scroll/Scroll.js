@@ -17,9 +17,13 @@ import getHost from '../../utils/getHost';
 
 
 export default function Scroll(props) {
+
     const [data, setData] = useState([])
+    const [lastRequest, setLastRequest] = useState("")
+ 
 
     function getData() {
+        setData(null); 
         console.log("Getting data")
         axios.get(`/api/${props.timelineOption.request}`)
         .then((res) => {
@@ -27,14 +31,16 @@ export default function Scroll(props) {
         })
         .catch((error) => { console.log(error); });
     }
+   
 
 
-    getData();
-     
+    if(props.timelineOption.request != lastRequest){
+        getData();
+        setLastRequest(props.timelineOption.request);
+    }
 
     return( 
-        <div className={styles.scroller}>
-            <h1 onClick={() => {getData()}}>Get</h1>
+        <div className={styles.scroller} id={'timeline'} itemID={'timeline'}>
             <style> 
                 { 
                     `
@@ -66,75 +72,77 @@ export default function Scroll(props) {
                 }
             </style>
             {
-                data !=null || data.length >0?
-                    props.timelineOption.name == ListItems[0].name?
-                    data.map((x, key) =>{
-                        return <Tweet
-                            key={key}
-                    
-                            twText={x.fullText}
-                            twMedia={x.mediaUrl}
-                            twUser={x.user}
-                            twUserPhoto={x.userPhoto}
-                            twLink={x.link} 
-                        />
-                    })
-                    :
-                    props.timelineOption.name == ListItems[1].name?
-                    data.map((x, key) =>{
-                        return <New
-                            key={key}
-                    
+                data !=null?
+                    data.length < 1?
+                        data.map((x, key) =>{
+                            return  props.timelineOption.name == ListItems[0].name?
+                            <Tweet
+                                key={key}
+                        
+                                twText={x.fullText}
+                                twMedia={x.mediaUrl}
+                                twUser={x.user}
+                                twUserPhoto={x.userPhoto}
+                                twLink={x.link} 
+                            />
+                            :
+                            props.timelineOption.name == ListItems[1].name?
+                            <New
+                                key={key}
+                        
+                                type={props.timelineOption.name}
+                                title={x.title}
+                                description={x.description}
+                                image={x.urlToImage}
+                                url={x.url}
+                            />:
+                            props.timelineOption.name == ListItems[2].name?
+                            <Random
                             type={props.timelineOption.name}
                             title={x.title}
                             description={x.description}
                             image={x.urlToImage}
                             url={x.url}
-                        />
-                    }):
-                    props.timelineOption.name == ListItems[2].name?
-                    data.map((x, key) =>{
-                        return  <Random
-                        type={props.timelineOption.name}
-                        title={x.title}
-                        description={x.description}
-                        image={x.urlToImage}
-                        url={x.url}
 
-                        key={key}
-
-                        quote={x.text}
-                        author={x.author}
-
-                        twText={x.fullText}
-                        twMedia={x.mediaUrl}
-                        twUser={x.user}
-                        twUserPhoto={x.userPhoto}
-                        twLink={x.link} 
-                    />
-                    }):
-                    props.timelineOption.name == ListItems[3].name?
-                    data.map((x,key) => {
-                        return <Quote
                             key={key}
+
                             quote={x.text}
                             author={x.author}
+
+                            twText={x.fullText}
+                            twMedia={x.mediaUrl}
+                            twUser={x.user}
+                            twUserPhoto={x.userPhoto}
+                            twLink={x.link} 
+                        />:
+                        props.timelineOption.name == ListItems[3].name?
+                        <Quote
+                                key={key}
+                                quote={x.text}
+                                author={x.author}
                         />
-                    }):<ReactLoading
+                        :
+                        <ReactLoading
+                            type={"bubbles"}
+                            color={"#C4C4C4"}
+                            className={styles.loading}
+                        />
+                            
+                        })
+                    :    
+                    <ReactLoading
+                        type={"bubbles"}
+                        color={"#C4C4C4"}
+                        className={styles.loading}
+                    />
+                :    
+                <ReactLoading
                     type={"bubbles"}
                     color={"#C4C4C4"}
                     className={styles.loading}
                 />
-                        
-            :    
-            <ReactLoading
-                type={"bubbles"}
-                color={"#C4C4C4"}
-                className={styles.loading}
-            />
-            
-               
             }
+
         </div>
     )
 
