@@ -7,7 +7,7 @@ import styles from './Menu.module.css'
 
 export default function HeaderMenu(props)  {
     //Set the timeLine as news to start selectedOption
-    function choseOption(option) {
+    function chooseOption(option) {
         ListItems.map((items) => {return items.control = false})
         ListItems.filter((items) => { return items.name === option.name ?  items : null })[0].control = true
         props.listenMenu(option.name)
@@ -41,7 +41,7 @@ export default function HeaderMenu(props)  {
                             <li key={key} className={styles.menuOption}>
                                 <h3
                                     className={item.control ? styles.selectedOption : styles.link }
-                                    onClick={()=> choseOption(item)}>{item.name}
+                                    onClick={()=> chooseOption(item)}>{item.name}
                                 </h3>
                             </li>
                         )

@@ -5,9 +5,13 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
+import Random from '../components/Item/random';
+import Quote from '../components/Item/Quote/Quote'
+import Tweet from '../components/Item/Tweet/Tweet'
+import New from '../components/Item/New/New'
 
 import { getDayFase, getDayColor } from '../utils/dayMomentSystem';
-
+import ListItens from '../utils/menuItems'
 
 import Header from '../components/Header/Header';
 import Menu from '../components/Menu/Menu';
@@ -16,12 +20,10 @@ import Scroll from '../components/Scroll/Scroll';
 export default class timeLine extends Component {
     state = {
         option: "Random",
-        isReady: true
     }
 
     listenMenu = (selectedOption) => {
         this.setState({ option: selectedOption })
-        console.log(selectedOption)
     }
 
     render() {
@@ -52,7 +54,7 @@ export default class timeLine extends Component {
                     
                 <Header/>
                 <Menu listenMenu={this.listenMenu}/>
-                <Scroll option={this.state.option}/>
+                <Scroll timelineOption={this.state.option}/>
             </div>
         );
     }
