@@ -19,7 +19,7 @@ import Scroll from '../components/Scroll/Scroll';
 
 export default class timeLine extends Component {
     state = {
-        option: "Random",
+        option: ListItens[2],
     }
 
     listenMenu = (selectedOption) => {

@@ -10,7 +10,7 @@ export default function HeaderMenu(props)  {
     function chooseOption(option) {
         ListItems.map((items) => {return items.control = false})
         ListItems.filter((items) => { return items.name === option.name ?  items : null })[0].control = true
-        props.listenMenu(option.name)
+        props.listenMenu(option)
     }
 
     return (
