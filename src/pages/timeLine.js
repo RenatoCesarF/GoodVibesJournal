@@ -1,7 +1,7 @@
 import React,{ Component } from 'react'
 import Head from 'next/head'
 
-import { getDayColor } from '../utils/dayMomentSystem';
+import { getDayColor,getHeaderDayColor } from '../utils/dayMomentSystem';
 import ListItens from '../utils/menuItems'
 
 import Header from '../components/Header/Header';
@@ -25,6 +25,7 @@ export default class timeLine extends Component {
                     <link rel="shortcut icon" href='../../static/icon_unfilled.ico'/>
                     <title>Good Vibes Jornal</title>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+                    <meta name="theme-color" content={getHeaderDayColor()} />
                 </Head>
  
                 <style jsx global >{`       
