@@ -29,6 +29,7 @@ export default class timeLine extends Component {
     render() {
         return (
             <div>
+                
                 <Head>
                     <link rel="shortcut icon" href='../../static/icon_unfilled.ico'/>
                     <title>Good Vibes Jornal</title>

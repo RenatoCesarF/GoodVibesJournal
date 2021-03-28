@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import React,{ useState } from 'react'
 import Head from 'next/head'
 import styles from"../styles/index.module.css"
-import { getDayFase, getDayColor, getHeaderDayColor } from '../utils/dayMomentSystem';
+import { getDayFase, getDayColor } from '../utils/dayMomentSystem';
 
 
 function Home() {    

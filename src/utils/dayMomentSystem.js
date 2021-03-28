@@ -37,21 +37,3 @@ export function getDayColor(){
     }
     return backgroundColor;
 }
-
-export function getHeaderDayColor(){
-    var color;
-    var dayFase = getDayFase()
-
-    switch(dayFase){
-        case "Morning":
-            color = "#6D6875"
-            break
-        case "Evening":
-            color = "#d69265"
-            break
-        case "Night":
-            color = "#3B4974"
-            break
-    }
-    return color;
-}
