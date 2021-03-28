@@ -4,10 +4,11 @@ import { FaPeace,FaHeart, FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import React, { useState } from 'react';
 import logo from '../../../assets/logo.png'
+import ScrollToTop from '../ScrollToTop/scrollToTop'
 
 export default function Header() {
     const [infosStyle, setInfosStyle] = useState(styles.closedInfos)
-
+    
     function showInfo() {
         if (infosStyle == styles.closedInfos) {
             setInfosStyle(styles.openedInfos)
@@ -15,18 +16,24 @@ export default function Header() {
             setInfosStyle(styles.closedInfos)
         }
     } 
-  
+   
     return(
         <header className={styles.header}>
+         
+            
             <CgInfo
-            size="5%"
                 className={styles.infoIcon}
                 onClick={showInfo}
             />
+            <ScrollToTop className={styles.infoIcon}/>
+       
+          
             <img
                 src={logo}
                 className={styles.logo}
             />
+   
+
             <div className={infosStyle}>
                 <h3 className={styles.informationDescription}>
                     {`Made with`}

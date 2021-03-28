@@ -7,7 +7,7 @@ var oldRandom
 
 export default async function getQuote(request, response) {
     if (alreadyRequested) {
-        var hours = 24
+        var hours = 6
         response.json(oldRandom)
         
         setTimeout(() => {

@@ -45,7 +45,7 @@ function Home() {
                 <h1 className={titleState} >Good <br/>{getDayFase()}</h1>
             </div>
           
-            <FaAngleDoubleDown className={styles.icon} onClick={ navToTimeLine} size="3rem"/>
+            <FaAngleDoubleDown className={styles.icon} onClick={navToTimeLine} size="3rem"/>
          
         </div> 
 
