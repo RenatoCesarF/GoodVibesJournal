@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import React,{ useState } from 'react'
 import Head from 'next/head'
 import styles from"../styles/index.module.css"
-import { getDayFase, getDayColor } from '../utils/dayMomentSystem';
+import { getDayFase, getDayColor, getHeaderDayColor } from '../utils/dayMomentSystem';
 
 
 function Home() {    
@@ -23,6 +23,7 @@ function Home() {
             <link rel="shortcut icon" href='../../static/icon_unfilled.ico'/>
             <title>Good Vibes Jornal</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta name="theme-color" content={getHeaderDayColor()} />
         </Head>
         
             <style jsx global >{`       

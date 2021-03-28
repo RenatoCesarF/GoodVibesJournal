@@ -11,7 +11,7 @@ import New from '../components/Item/New/New'
 
 import Header from'../components/Header/Header';
 import Menu from'../components/Menu/Menu';
-import {getDayColor } from '../utils/dayMomentSystem';
+import {getDayColor, getHeaderDayColor } from '../utils/dayMomentSystem';
 import styles from"../styles/jornal.module.css"
 import ListItems from  '../utils/menuItems';
 import getHost from "../utils/getHost";
@@ -75,6 +75,7 @@ export default function Jornal(props){
                 <link rel="shortcut icon" href='../../static/icon_unfilled.ico'/>
                 <title>Good Vibes Jornal</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta name="theme-color" content={getHeaderDayColor()} />
             </Head>
 
             <style jsx global >
