@@ -2,7 +2,7 @@ import React, { Component, useState, useEffect } from 'react';
 import Next from 'next';
 import axios from "axios";
 import ReactLoading from 'react-loading';
-
+import {getDayColor} from '../../utils/dayMomentSystem'
 
 import Random from '../Item/random';
 import Quote from '../Item/Quote/Quote'
@@ -44,30 +44,30 @@ export default function Scroll(props) {
             <style> 
                 { 
                     `
+                    
                     ::-webkit-scrollbar{
                         position: relative;
+                        background: rgba(0, 0, 0, .1);
+                        ${getDayColor()}
                         width: 0.6rem;
                         border-radius: 5px;
                         cursor: pointer;
                         margin-left: 2vw;
                     }
                     
-                    //Track
+                    /* Track */
                     ::-webkit-scrollbar-track {
                         background: #2d2d2d10;
                     }
                     
-                    // Handle
+                    /* Handle */
                     ::-webkit-scrollbar-thumb {
                         cursor: pointer;
-                        background: #2d2d2d70;
+                        background: #52525280;;
                         border-radius: 5px;
                     }
                     
-                    // Handle on hover 
-                    ::-webkit-scrollbar-thumb:hover {
-                        background: #2d2d2d50;
-                    }
+             
                     `
                 }
             </style>
