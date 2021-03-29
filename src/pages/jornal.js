@@ -70,7 +70,7 @@ export default function Jornal(props){
     }
 
     return (
-        <div>
+        <div  id={'timeline'} itemID={'timeline'}>
             <Head>
                 <link rel="shortcut icon" href='../../static/icon_unfilled.ico'/>
                 <title>Good Vibes Jornal</title>
