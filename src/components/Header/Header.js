@@ -1,20 +1,23 @@
 import styles from './Header.module.css';
 import { CgInfo } from 'react-icons/cg';
-import { FaPeace,FaHeart, FaGithub } from 'react-icons/fa';
+import { FaPeace,FaHeart, FaGithub, FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import {CgArrowUpO} from 'react-icons/cg'
+
 import React, { useState } from 'react';
 import logo from '../../../assets/logo.png'
-import ScrollToTop from '../ScrollToTop/scrollToTop'
+import scrollToTop from '../../utils/scrollToTop';
 
 export default function Header() {
     const [infosStyle, setInfosStyle] = useState(styles.closedInfos)
     
     function showInfo() {
-        if (infosStyle == styles.closedInfos) {
-            setInfosStyle(styles.openedInfos)
-        } else {   
+        if (infosStyle != styles.closedInfos) {
             setInfosStyle(styles.closedInfos)
+            return;   
         }
+
+        setInfosStyle(styles.openedInfos)
     } 
    
     return(
@@ -25,9 +28,9 @@ export default function Header() {
                 className={styles.infoIcon}
                 onClick={showInfo}
             />
-            <ScrollToTop className={styles.infoIcon}/>
-       
-          
+
+            <CgArrowUpO onClick={scrollToTop}className={styles.scroll_icon}/>
+
             <img
                 src={logo}
                 className={styles.logo}
@@ -43,15 +46,23 @@ export default function Header() {
                     {'by Renato Cesar'}
                     <br />
                     
-                    <div  className={styles.myEmailDiv} >
-                        {'Any sugestion or feedback send it to: '}
+                    <div  className={styles.contactDiv} >
+                        {'Sugestion or feedback send it to: '}
                         <br />
 
-                        <MdEmail className={styles.emailSymble } href="mailto:re.fbarcellos@hotmail.com"/>
+                        <MdEmail className={styles.emailSymbol } href="mailto:re.fbarcellos@hotmail.com"/>
                         <a className={styles.emailText} href="mailto:re.fbarcellos@hotmail.com" >
                             re.fbarcellos@hotmail.com
                         </a>
+
+                        <br/>
+
+                        <FaTwitter className={styles.twitterSymbol } href="http://twitter.com/nerat0"/>
+                        <a className={styles.twitterText} href="http://twitter.com/nerat0">
+                            @nerat0
+                        </a>
                     </div>
+
 
                     <FaGithub
                         className={styles.gitSymble}

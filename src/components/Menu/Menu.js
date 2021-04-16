@@ -3,17 +3,11 @@ import 'react-dom';
 import 'next';
 import ListItems from '../../utils/menuItems';
 import styles from './Menu.module.css'
+import scrollToTop from '../../utils/scrollToTop'
 
 
 export default function HeaderMenu(props)  {
     //Set the timeLine as news to start selectedOption
-    function scrollToTop() {
-        const timelineComponent = document.getElementById('timeline');
-        timelineComponent.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    }
 
     function chooseOption(option) {
         scrollToTop()

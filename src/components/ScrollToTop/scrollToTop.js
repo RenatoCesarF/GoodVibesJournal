@@ -1,3 +1,4 @@
+//this is a component used in the test page "Jornal" it can be delited in the future
 import React, { Component } from "react";
 import { CgArrowUpO } from 'react-icons/cg';
 

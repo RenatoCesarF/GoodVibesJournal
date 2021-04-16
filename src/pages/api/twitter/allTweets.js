@@ -15,34 +15,35 @@ export default async function getTweets(request, response) {
         setTimeout(() => {
             console.log("Youalready requested here")
         }, hours * 60 * 60 * 1000)
+        return;
     }
-    else {
-        const users = [
-            //"bestmemes69",
-            "tinycarebot",
-            "sacoliro",
-            "cuteevideos",
-            "NeverthinkTV",
-            "happyyouare"
-        ]
+  
+    const users = [
+        //"bestmemes69",
+        "tinycarebot",
+        "sacoliro",
+        "cuteevideos",
+        "NeverthinkTV",
+        "happyyouare",
+        "gifsdeanimal"
+    ]
 
-        var allTweets = {type: "Tweets", data: []}
-    
-        for( var user of users){
-            var tweets = await getFromUser(user)
-            
-            for( var item of tweets){
-                allTweets.data.push(item)
-            }
-        }
-    
-        allTweets.data = shuffle(allTweets.data)
+    var allTweets = {type: "Tweets", data: []}
+
+    for( var user of users){
+        var tweets = await getFromUser(user)
         
-        response.json(allTweets)
-
-        alreadyRequested = true
-        oldTweets = allTweets 
+        for( var item of tweets){
+            allTweets.data.push(item)
+        }
     }
+
+    allTweets.data = shuffle(allTweets.data)
+    
+    response.json(allTweets)
+
+    alreadyRequested = true
+    oldTweets = allTweets 
 }
 
 async function getFromUser(user) {

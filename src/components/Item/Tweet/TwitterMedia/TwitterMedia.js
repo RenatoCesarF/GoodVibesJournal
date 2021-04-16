@@ -5,9 +5,9 @@ function isImage(url) {
         
         if (url.includes('.jpg') || url.includes('.png') || url.includes('.gif')) {
             return true
-        } else {
-            return false
         }
+
+        return false
     }
 }
 

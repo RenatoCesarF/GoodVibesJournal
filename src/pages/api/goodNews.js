@@ -2,7 +2,6 @@ import Sentiment from 'sentiment'
 
 export default async function getGoodNews(request, response) {
    //TODO: add an ID to each new, thus we can filter it
-    
     //Configurating the NewsAPI request 
     var url = 'http://newsapi.org/v2/top-headlines?' +
         `country=us&` +
@@ -28,6 +27,7 @@ export default async function getGoodNews(request, response) {
     */
     //Filtering and Getting just the good news 
     var counter = 0
+
     articles.forEach(element => {
         var eachSentiment = sentiment.analyze(element.title);//Choosing what to analyze
         if(eachSentiment.score>= 1){ //separeting the positive from the negative ones
@@ -50,6 +50,4 @@ export default async function getGoodNews(request, response) {
 
     response.setHeader('Cache-Controll','s-maxage=10','stale-while-revalidate')
     response.json(positiveArticles);
-
-
 }

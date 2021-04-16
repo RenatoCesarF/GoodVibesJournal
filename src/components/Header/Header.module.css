@@ -4,6 +4,11 @@
     margin-right: auto;
     margin-left: 35%;
     width: 25%;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 @media (max-width: 582px){
@@ -68,7 +73,6 @@
 .informationDescription{
     color: #D4D0D2;
     text-align: center;
-
 }
 
 .peaceSymble{ 
@@ -84,8 +88,8 @@
 }
 
 /*================ Email stufs  ====*/
-.myEmailDiv{
-    padding-top: 4vh;
+.contactDiv{
+    padding-top: 3vh;
     padding-right: 1vw;
     padding-left: 1vw;
 }
@@ -96,18 +100,33 @@
     vertical-align: super;
     padding-left: 0.8vw;
 }
-.emailSymble{
+.emailSymbol{
     color: #6F40FF;
     width:4vh;
     height:4vh;
+    cursor:pointer;
 }
 
+.twitterSymbol{
+    cursor:pointer;
+    color: #1C9CEA;
+    width:4vh;
+    height:4vh;
+}
+.twitterText{
+    text-align: left;
+    text-decoration: underline;
+    cursor:pointer;
+    color: #D4D0D2;
+    vertical-align: super;
+    padding-left: 0.8vw;
+}
 .gitSymble{
     cursor:pointer;
     color: #D4D0D2;
     width:4vh;
     height:4vh;
-    padding-top: 5vh;
+    padding-top: 2vh;
 }
 
 @media (max-width: 768px){
@@ -130,3 +149,32 @@
 }
 
 
+
+
+
+/*=========SCROLL BUTTON ============*/
+.scroll_icon {
+    animation: fadeIn 700ms ease-in-out 1s both;
+    cursor: pointer;
+    text-align: center;
+	position:fixed;
+	right:3vw;
+    top:8vmin;
+    color: #e6d8cf;
+    mix-blend-mode: normal;
+ 
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.5s;
+    margin-top: 4vh;
+    text-shadow: 0.1em 0.1em 0.07em rgba(0, 0, 0, 0.657);
+  }
+
+
+  @media (max-width: 544px){
+    .scroll_icon{
+        right:0.3rem;
+        width: 1.6rem;
+        height:1.6rem;
+    }
+}
