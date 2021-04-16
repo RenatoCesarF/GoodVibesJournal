@@ -11,8 +11,7 @@ import New from '../Item/New/New'
 
 
 import styles from './Scroll.module.css';
-import ScrollToTop from '../ScrollToTop/scrollToTop';
-import ListItems from '../../utils/menuItems';
+    import ListItems from '../../utils/menuItems';
 import getHost from '../../utils/getHost';
 
 
