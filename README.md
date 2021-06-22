@@ -1,9 +1,9 @@
 
-<a  href="https://goodvibesjornal.vercel.app/">
+<a  href="https://goodvibesjournal.vercel.app/">
 <img src="https://user-images.githubusercontent.com/62253156/111234059-2671ab80-85c4-11eb-85aa-a9fa8a5c7767.png" width="1200"/>
 </a>
 <h2> A Good Vibes Jornal to keep your soul alive in bad days </h2>
-<h2> 🖱️ Access in : https://goodvibesjornal.vercel.app/ </h2>
+<h2> 🖱️ Access in : https://goodvibesjournal.vercel.app/ </h2>
 <p align='center'>
    <a href="https://gitmoji.carloscuesta.me">
     <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -75,4 +75,4 @@ Maybe a website to bring you good vibes for your day, just happy news, no accoun
 - BigPicture mode to just see the TimeLine
 
 
-<h2> 🖱️ Access in : https://goodvibesjornal.vercel.app/ </h2>
+<h2> 🖱️ Access in: https://goodvibesjournal.vercel.app/ </h2>
