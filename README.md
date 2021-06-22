@@ -24,7 +24,7 @@ Every good thing that the internet can provides you, (or just the ones that give
 
 ### :thinking: Why?
 With all these bad and sad things happening in all the world, we ended with just bad news and things in our day, or devaluing our day because of those things. And with all those algorithms trying to put you in a bubble to keep you consuming, and addicted to their apps
-Maybe a website to bring you good vibes for your day, just happy news, no account, no AI algorithm, just the old jornal thing, but with the technology that we have nowadays
+Maybe a website to bring you good vibes for your day, just happy news, no account, no AI algorithm, just the old journal thing, but with the technology that we have nowadays
 
 
 
