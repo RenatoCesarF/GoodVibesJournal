@@ -21,7 +21,7 @@ function Home() {
         <div>
         <Head>
             <link rel="shortcut icon" href='../../static/icon_unfilled.ico'/>
-            <title>Good Vibes Jornal</title>
+            <title>Good Vibes Journal</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <meta name="theme-color" content={getHeaderDayColor()} />
         </Head>

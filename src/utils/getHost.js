@@ -1,5 +1,5 @@
 export default function getHost() {
-    var host = "https://goodvibesjornal.vercel.app"
-
+    var host = "https://goodvibesjournal.vercel.app"
+    // var host = "http://localhost:3000"
     return host
 }

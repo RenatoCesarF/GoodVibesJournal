@@ -66,7 +66,7 @@ export default function Header() {
 
                     <FaGithub
                         className={styles.gitSymble}
-                        onClick={() => {window.open("https://github.com/RenatoCesarF/GoodVibesJornal") }}
+                        onClick={() => {window.open("https://github.com/RenatoCesarF/GoodVibesJournal") }}
                     />
                 </h3>
             </div>

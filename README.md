@@ -2,7 +2,7 @@
 <a  href="https://goodvibesjournal.vercel.app/">
 <img src="https://user-images.githubusercontent.com/62253156/111234059-2671ab80-85c4-11eb-85aa-a9fa8a5c7767.png" width="1200"/>
 </a>
-<h2> A Good Vibes Jornal to keep your soul alive in bad days </h2>
+<h2> A Good Vibes Journal to keep your soul alive in bad days </h2>
 <h2> 🖱️ Access in : https://goodvibesjournal.vercel.app/ </h2>
 <p align='center'>
    <a href="https://gitmoji.carloscuesta.me">

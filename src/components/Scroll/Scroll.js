@@ -28,7 +28,7 @@ export default function Scroll(props) {
         .then((res) => {
             setData(res.data.data)
         })
-        .catch((error) => { console.log(error); });
+        .catch((error) => { /*console.log(error);*/ });
     }
    
 
