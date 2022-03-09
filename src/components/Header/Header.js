@@ -22,7 +22,6 @@ export default function Header() {
    
     return(
         <header className={styles.header}>
-         
             
             <CgInfo
                 className={styles.infoIcon}
@@ -34,20 +33,21 @@ export default function Header() {
             <img
                 src={logo}
                 className={styles.logo}
+                alt="Logo"
             />
    
 
             <div className={infosStyle}>
-                <h3 className={styles.informationDescription}>
-                    {`Made with`}
+                <p className={styles.informationDescription}>
+                    Made with
                     <FaPeace className={styles.peaceSymble} />
-                    {"and"}
+                    and
                     <FaHeart className={styles.hearthSymble}/>
-                    {'by Renato Cesar'}
+                    by Renato Cesar
                     <br />
                     
                     <div  className={styles.contactDiv} >
-                        {'Sugestion or feedback send it to: '}
+                        Sugestions or feedback send it to:
                         <br />
 
                         <MdEmail className={styles.emailSymbol } href="mailto:re.fbarcellos@hotmail.com"/>
@@ -58,7 +58,7 @@ export default function Header() {
                         <br/>
 
                         <FaTwitter className={styles.twitterSymbol } href="http://twitter.com/nerat0"/>
-                        <a className={styles.twitterText} href="http://twitter.com/nerat0">
+                        <a target="_blank" rel="noopener noreferrer" className={styles.twitterText} href="http://twitter.com/nerat0">
                             @nerat0
                         </a>
                     </div>
@@ -68,7 +68,7 @@ export default function Header() {
                         className={styles.gitSymble}
                         onClick={() => {window.open("https://github.com/RenatoCesarF/GoodVibesJournal") }}
                     />
-                </h3>
+                </p>
             </div>
         </header>
         )

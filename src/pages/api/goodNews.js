@@ -3,7 +3,7 @@ import Sentiment from 'sentiment'
 export default async function getGoodNews(request, response) {
    //TODO: add an ID to each new, thus we can filter it
     //Configurating the NewsAPI request 
-    var url = 'http://newsapi.org/v2/top-headlines?' +
+    const url = 'http://newsapi.org/v2/top-headlines?' +
         `country=us&` +
         `apiKey=${process.env.NEWS_API_KEY}`;
     
@@ -13,18 +13,11 @@ export default async function getGoodNews(request, response) {
     //Starting the analyzing system
     var articles = responseToJson.articles;
 
-    var sentiment = new Sentiment();
+    const sentiment = new Sentiment();
     
     var positiveArticles = {type: "News", data:[]};
 
-    //console.log(`\nThe initial number of articles is: ${articles.length}\n`)
-    
-    /*
-    title
-    description
-    urlToImage
-    url
-    */
+
     //Filtering and Getting just the good news 
     var counter = 0
 
@@ -44,10 +37,6 @@ export default async function getGoodNews(request, response) {
         }
     });
     
-    //console.log( `\nThe final number of articles is :${positiveArticles.length} \n`)
-    
-    //Configuring the response of our API
-
     response.setHeader('Cache-Controll','s-maxage=10','stale-while-revalidate')
     response.json(positiveArticles);
 }

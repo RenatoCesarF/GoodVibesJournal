@@ -11,7 +11,7 @@ import New from '../Item/New/New'
 
 
 import styles from './Scroll.module.css';
-    import ListItems from '../../utils/menuItems';
+import ListItems from '../../utils/menuItems';
 import getHost from '../../utils/getHost';
 
 
@@ -40,93 +40,73 @@ export default function Scroll(props) {
 
     return( 
         <div className={styles.scroller} id={'timeline'} itemID={'timeline'}>
-            <style> 
-                { 
-                    `
-                    
-                    ::-webkit-scrollbar{
-                        position: relative;
-                        background: rgba(0, 0, 0, .1);
-                        ${getDayColor()}
-                        width: 0.6rem;
-                        border-radius: 5px;
-                        cursor: pointer;
-                        margin-left: 2vw;
-                    }
-                    
-                    /* Track */
-                    ::-webkit-scrollbar-track {
-                        background: #2d2d2d10;
-                    }
-                    
-                    /* Handle */
-                    ::-webkit-scrollbar-thumb {
-                        cursor: pointer;
-                        background: #52525280;;
-                        border-radius: 5px;
-                    }
-                    
-             
-                    `
-                }
-            </style>
+    
             {
                 data !=null?
-                    data.map((x, key) =>{
-                        return  props.timelineOption.name == ListItems[0].name?
-                            <Tweet
-                                key={key}
-                        
-                                twText={x.fullText}
-                                twMedia={x.mediaUrl}
-                                twUser={x.user}
-                                twUserPhoto={x.userPhoto}
-                                twLink={x.link} 
-                            />
-                            :
-                        props.timelineOption.name == ListItems[1].name?
-                            <New
-                                key={key}
-                        
-                                type={props.timelineOption.name}
-                                title={x.title}
-                                description={x.description}
-                                image={x.urlToImage}
-                                url={x.url}
-                            />
-                            :
-                        props.timelineOption.name == ListItems[2].name?
-                            <Random
-                                type={props.timelineOption.name}
-                                title={x.title}
-                                description={x.description}
-                                image={x.urlToImage}
-                                url={x.url}
+                    data.map((element, key) =>{
+                        switch (props.timelineOption.name) {
+                            case ListItems[0].name:
+                                return (
+                                    <Tweet
+                                        key={key}
+                                
+                                        twText={element.fullText}
+                                        twMedia={element.mediaUrl}
+                                        twUser={element.user}
+                                        twUserPhoto={element.userPhoto}
+                                        twLink={element.link} 
+                                    />
+                                )
+                            case ListItems[1].name:
+                                return(
+                                    <New
+                                        key={key}
+                                
+                                        type={props.timelineOption.name}
+                                        title={element.title}
+                                        description={element.description}
+                                        image={element.urlToImage}
+                                        url={element.url}
+                                    />
+                                )
+                            case ListItems[2].name:
+                                return(
+                                    <Random
+                                        type={props.timelineOption.name}
+                                        title={element.title}
+                                        description={element.description}
+                                        image={element.urlToImage}
+                                        url={element.url}
 
-                                key={key}
+                                        key={key}
 
-                                quote={x.text}
-                                author={x.author}
+                                        quote={element.text}
+                                        author={element.author}
 
-                                twText={x.fullText}
-                                twMedia={x.mediaUrl}
-                                twUser={x.user}
-                                twUserPhoto={x.userPhoto}
-                                twLink={x.link} 
-                            />:
-                        props.timelineOption.name == ListItems[3].name?
-                            <Quote
-                                key={key}
-                                quote={x.text}
-                                author={x.author}
-                            />
-                    :
-                    <ReactLoading
-                        type={"bubbles"}
-                        color={"#C4C4C4"}
-                        className={styles.loading}
-                    />
-                        
+                                        twText={element.fullText}
+                                        twMedia={element.mediaUrl}
+                                        twUser={element.user}
+                                        twUserPhoto={element.userPhoto}
+                                        twLink={element.link} 
+                                    />
+                                )
+                            case ListItems[3].name:
+                                return(
+                                    <Quote
+                                    key={key}
+                                    quote={element.text}
+                                    author={element.author}
+                                    />
+                                )
+
+                            default:
+                                return(
+                                <ReactLoading
+                                    type={"bubbles"}
+                                    color={"#C4C4C4"}
+                                    className={styles.loading}
+                                />)
+                        }
                     })
                 :    
                 <ReactLoading

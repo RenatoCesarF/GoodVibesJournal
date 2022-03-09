@@ -2,12 +2,12 @@
     background-color: #C4C4C4;
     
     border-radius: 30px;
-    margin-bottom: 2%;
+    margin-bottom: 2vh;
     margin-right: 1.2vw;
     
-    height: fit-content;
-    min-width: min-content;
-    min-height: fit-content;
+    height: max-content;
+    /* min-width: min-content;
+    min-height: fit-content; */
     box-shadow:  0vh 1vh 0.6vh #0000002c;
 
     display: table-row-group;

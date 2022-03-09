@@ -19,13 +19,10 @@ export default async function getTweets(request, response) {
     }
   
     const users = [
-        //"bestmemes69",
         "tinycarebot",
-        "sacoliro",
-        "cuteevideos",
         "NeverthinkTV",
-        "happyyouare",
-        "gifsdeanimal"
+        "CatWorkers",
+        "AnimalNoContext"
     ]
 
     var allTweets = {type: "Tweets", data: []}

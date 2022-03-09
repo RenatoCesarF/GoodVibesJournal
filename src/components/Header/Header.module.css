@@ -32,7 +32,6 @@
 
 /*================ information icon styles == */
 .infoIcon{ 
-
     cursor: pointer;
     text-align: center;
 	position:fixed;
@@ -60,17 +59,24 @@
     display: none;
 }
 .openedInfos{
-    width:30vw;
-	height:30vh;
+    /* width:30vw;
+	height:30vh; */
+
+    width: min-content;
+    min-width: 300px;
+    height: min-content;
 	right:3.5vw;
     top: 8vh;
     position:fixed;
     background-color: #2d2d2d;
-    border-radius: 30px;
+    border-radius: 10%;
+
+    padding: 10px;
 }
 
 /* =============== inside information styles == */
 .informationDescription{
+    font-size: 1rem;
     color: #D4D0D2;
     text-align: center;
 }
@@ -90,8 +96,6 @@
 /*================ Email stufs  ====*/
 .contactDiv{
     padding-top: 3vh;
-    padding-right: 1vw;
-    padding-left: 1vw;
 }
 .emailText{
     text-decoration: underline;
@@ -133,10 +137,7 @@
     .headerTitle{
         margin-right: 0vw;   
     }
-    .openedInfos{
-        width:95vw;
-    }
-    
+
 }
 
 @media (max-width: 544px){

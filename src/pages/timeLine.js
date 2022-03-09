@@ -42,8 +42,32 @@ export default class timeLine extends Component {
                         
                         overflow: hidden;
                     }
+                       
+                    ::-webkit-scrollbar{
+                        position: relative;
+                        background: rgba(0, 0, 0, .1);
+                        ${getDayColor()}
+                        width: 0.6rem;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        margin-left: 2vw;
+                    }
+                    
+                    /* Track */
+                    ::-webkit-scrollbar-track {
+                        background: #2d2d2d10;
+                    }
+                    
+                    /* Handle */
+                    ::-webkit-scrollbar-thumb {
+                        cursor: pointer;
+                        background: #52525280;;
+                        border-radius: 5px;
+                    }
+                    
                 `}
                 </style>
+
                     
                 <Header/>
                 <Menu listenMenu={this.listenMenu}/>
